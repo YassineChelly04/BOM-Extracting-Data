@@ -163,6 +163,15 @@ def _parse_row(row_texts: list[str]) -> dict | None:
 
     # Substance name = token immediately before the CAS number.
     substance = row_texts[cas_idx - 1] if cas_idx >= 1 else ""
+    # Common OCR corrections
+    OCR_FIXES = {
+        "opper": "Copper",
+        "ickel": "Nickel",
+        "arium Titanate": "Barium Titanate",
+        "in": "Tin",
+    }
+
+    substance = OCR_FIXES.get(substance, substance)
     if not substance or _NUM_RE.match(substance):
         return None  # malformed row, skip rather than guess
 
@@ -186,7 +195,8 @@ def _parse_row(row_texts: list[str]) -> dict | None:
         return None
 
     return {
-        "substance": f"{substance.strip()} ({cas})",
+        "material": substance.strip(),
+        "substance": cas,
         "weight_mg": f"{weight_mg:.10f}".rstrip("0").rstrip("."),
     }
 
@@ -232,7 +242,7 @@ def save_csv(records: list[dict], output_path: str) -> None:
     if not records:
         return
     with open(output_path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["substance", "weight_mg"])
+        writer = csv.DictWriter(f, fieldnames=["material", "substance", "weight_mg"])
         writer.writeheader()
         writer.writerows(records)
 
