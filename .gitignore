@@ -1,0 +1,9 @@
+.cache/
+.venv/
+__pycache__/
+*.pyc
+.env
+env-test/
+material_extractor/.cache/
+material_extractor/.pytest_cache/
+raw_data/

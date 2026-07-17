@@ -1,0 +1,40 @@
+Copper (Cu):
+  aliases:
+  - cu
+  - copper
+  cas_number: 7440-50-8
+Gold (Au):
+  aliases:
+  - au
+  - gold
+  cas_number: 7440-57-5
+Lead (Pb):
+  aliases:
+  - pb
+  - lead
+  cas_number: 7439-92-1
+Nickel (Ni):
+  aliases:
+  - ni
+  - nickel
+  cas_number: 7440-02-0
+Palladium (Pd):
+  aliases:
+  - pd
+  - palladium
+  cas_number: 7440-05-3
+Silver (Ag):
+  aliases:
+  - ag
+  - silver
+  cas_number: 7440-22-4
+Tin (Sn):
+  aliases:
+  - sn
+  - tin
+  cas_number: 7440-31-5
+Zinc (Zn):
+  aliases:
+  - zn
+  - zinc
+  cas_number: 7440-66-6

@@ -1,0 +1,341 @@
+Additives (Trade Secret):
+  aliases:
+  - trade secret
+  - further additives, not to declare
+  - proprietary
+  category: Additive
+Additives (Undisclosed):
+  aliases:
+  - undisclosed
+  - miscellaneous
+  category: Additive
+Aluminum (Al):
+  aliases:
+  - aluminum
+  - aluminium
+  - al
+  category: Metal
+Aluminum Hydroxide (Al(OH)3):
+  aliases:
+  - aluminium hydroxide (al(oh)3)
+  - aluminum hydroxide
+  category: Hydroxide
+Aluminum Oxide (Al2O3):
+  aliases:
+  - aluminum oxide
+  - al2o3
+  - aluminium oxide
+  category: Metal Oxide
+Anatase (TiO2):
+  aliases:
+  - anatase
+  - tio2
+  category: Metal Oxide
+Antimony Trioxide (Sb2O3):
+  aliases:
+  - antimony trioxide
+  - diantimony trioxide
+  - sb2o3
+  category: Metal Oxide
+Barium Oxide (BaO):
+  aliases:
+  - barium oxide
+  - bao
+  category: Metal Oxide
+Barium Sulfate (BaSO4):
+  aliases:
+  - barium sulfate
+  - baso4
+  category: Salt
+Barium Titanate (BaTiO3):
+  aliases:
+  - barium titanate
+  - batio3
+  category: Ceramic
+Base Metal (Cu):
+  aliases:
+  - base metal
+  - base metal (cu)
+  category: Metal
+Bismuth (Bi):
+  aliases:
+  - bismuth
+  - bi
+  category: Metal
+Calcium Oxide (CaO):
+  aliases:
+  - calcium oxide
+  - cao
+  category: Metal Oxide
+Calcium Zirconate (CaZrO3):
+  aliases:
+  - calcium zirconate
+  - cazro3
+  category: Ceramic
+Carbon Black:
+  aliases:
+  - carbon black
+  category: Filler
+Chlorine (Cl):
+  aliases:
+  - chlorine
+  - cl
+  category: Halogen
+Chromium (Cr):
+  aliases:
+  - chromium
+  - cr
+  category: Metal
+Cobalt (Co):
+  aliases:
+  - cobalt
+  - co
+  category: Metal
+Copper (Cu):
+  aliases:
+  - copper
+  - cu
+  - copper (cu)
+  category: Metal
+Copper Oxide (CuO):
+  aliases:
+  - copper oxide
+  - cuo
+  category: Metal Oxide
+Curing Agent (THPA):
+  aliases:
+  - tetrahydrophthalic anhydride
+  - thpa
+  category: Polymer Additive
+Doped Silicon (Si):
+  aliases:
+  - doped silicon
+  - doped silicon (si)
+  category: Metalloid
+Electrode Paste (Ni):
+  aliases:
+  - electrode paste
+  - electrode paste (ni)
+  category: Paste
+Epoxy Resin:
+  aliases:
+  - epoxy
+  - epoxy resin
+  category: Polymer
+Epoxy Resin (Bisphenol A DGEBA):
+  aliases:
+  - bisphenol a diglycidyl ether resin
+  category: Polymer
+Epoxy Resin (Phenol-Formaldehyde):
+  aliases:
+  - formaldehyde, polymer with (chloromethyl)oxirane and phenol
+  category: Polymer
+Epoxy Resin (TGIC):
+  aliases:
+  - triglycidyl isocyanurate
+  category: Polymer
+Epoxy Resin (o-Cresol Novolac):
+  aliases:
+  - o-cresol, formaldehyde, epichlorohydrin polymer
+  category: Polymer
+Finish Plating (Sn):
+  aliases:
+  - finish plating
+  - plating
+  - finish plating (sn)
+  category: Plating
+Fused Silica (SiO2):
+  aliases:
+  - fused silica
+  - silica fused
+  category: Metal Oxide
+Gallium Arsenide (GaAs):
+  aliases:
+  - gallium arsenide
+  - gaas
+  category: Compound Semiconductor
+Gallium Nitride (GaN):
+  aliases:
+  - gallium nitride
+  - gan
+  category: Compound Semiconductor
+Gallium Phosphide (GaP):
+  aliases:
+  - gallium phosphide
+  - gap
+  category: Compound Semiconductor
+Glass Fiber:
+  aliases:
+  - glass fiber
+  - fiber class
+  - gf-fibre
+  category: Composite
+Glass Oxide:
+  aliases:
+  - glass, oxide
+  - glass oxide
+  category: Glass
+Gold (Au):
+  aliases:
+  - gold
+  - au
+  - gold (au)
+  category: Metal
+Indium (In):
+  aliases:
+  - indium
+  - in
+  category: Metal
+Indium Nitride (InN):
+  aliases:
+  - indium nitride
+  - inn
+  category: Compound Semiconductor
+Iron (Fe):
+  aliases:
+  - iron
+  - fe
+  category: Metal
+Lead (Pb):
+  aliases:
+  - lead
+  - pb
+  - lead (pb)
+  category: Metal
+Lead-Containing Glass Frit:
+  aliases:
+  - glass frit( contain pb
+  - lead silicate [glass]
+  category: Glass
+Lead-Free Glass (Bi-Si-B):
+  aliases:
+  - glass (pb free) (contains bismuth, silicon & boron)
+  category: Glass
+Liquid Crystal Polymer (LCP):
+  aliases:
+  - lcp
+  - liquid crystal polymer
+  category: Polymer
+Magnesium (Mg):
+  aliases:
+  - magnesium
+  - mg
+  category: Metal
+Magnesium Oxide (MgO):
+  aliases:
+  - magnesium oxide
+  - mgo
+  category: Metal Oxide
+Manganese Dioxide (MnO2):
+  aliases:
+  - manganese dioxide
+  - mno2
+  category: Metal Oxide
+Nickel (Ni):
+  aliases:
+  - nickel
+  - ni
+  - nickel (ni)
+  category: Metal
+Palladium (Pd):
+  aliases:
+  - palladium
+  - pd
+  category: Metal
+Phosphorus (P):
+  aliases:
+  - phosphorus
+  - p
+  category: Non-Metal
+Pigment (Unknown 1):
+  aliases:
+  - pigment 1
+  category: Pigment
+Pigment (Unknown 2):
+  aliases:
+  - pigment 2
+  category: Pigment
+Poly(isobornyl methacrylate) (PIBMA):
+  aliases:
+  - poly(isobornyl) methacrylate
+  - pibma
+  category: Polymer
+Polysiloxanes:
+  aliases:
+  - polysiloxanes
+  category: Polymer
+Ruthenium Oxide (RuO2):
+  aliases:
+  - ruthenium oxide
+  - ruo2
+  category: Metal Oxide
+Silicon (Si):
+  aliases:
+  - silicon
+  - si
+  category: Metalloid
+Silicon Dioxide (SiO2):
+  aliases:
+  - silicon dioxide
+  - sio2
+  - silica
+  category: Metal Oxide
+Silver (Ag):
+  aliases:
+  - silver
+  - ag
+  - silver (ag)
+  category: Metal
+Solvent (Aromatic Naphtha):
+  aliases:
+  - eavy aromatic solvent naphth
+  - naphtha
+  category: Solvent
+Strontium Oxide (SrO):
+  aliases:
+  - strontium oxide
+  - sro
+  category: Metal Oxide
+Sulphur Trioxide (SO3):
+  aliases:
+  - sulphur trioxide
+  - so3
+  category: Metal Oxide
+Tin (Sn):
+  aliases:
+  - tin
+  - sn
+  - tin (sn)
+  category: Metal
+Tricobalt Tetraoxide (Co3O4):
+  aliases:
+  - tricobalt tetraoxide
+  - co3o4
+  category: Metal Oxide
+Under Layer (Ni):
+  aliases:
+  - under layer
+  - underlayer
+  - under layer (ni)
+  category: Plating
+Yttrium Oxide (Y2O3):
+  aliases:
+  - yttrium oxide
+  - y2o3
+  category: Metal Oxide
+Zinc (Zn):
+  aliases:
+  - zinc
+  - zn
+  - zinc (zn)
+  category: Metal
+Zinc Oxide (ZnO):
+  aliases:
+  - zinc oxide
+  - zno
+  category: Metal Oxide
+Zirconium Dioxide (ZrO2):
+  aliases:
+  - zirconium dioxide
+  - zro2
+  category: Metal Oxide

@@ -1,0 +1,40 @@
+metadata:
+  template_id: molex_bom
+  name: Molex/TE Connectivity BOM
+  version: 1.0.0
+  description: Molex Annex 3 table format for MLCC materials with case sizes
+  author: Material Extractor Team
+  source_type: pdf
+  page_indices:
+  - 1
+  detection_method: text_pattern
+  detection_keywords:
+  - Homogeneous Level Weight
+  - Total Weight
+  - '0402'
+  header_keywords:
+  - Level
+  - Material
+  - Substance
+  - CAS
+  validation_rules:
+    min_rows: 3
+    min_cols: 5
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: pdf_table
+  extractor_class: MolexTemplateExtractor
+  target_size: '0402'
+  skip_rows:
+  - Homogeneous Level Weight
+  - Total Weight
+  case_sizes_row: 1
+  header_row: 2
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true

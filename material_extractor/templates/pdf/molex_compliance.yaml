@@ -1,0 +1,38 @@
+metadata:
+  template_id: molex_compliance
+  name: Molex Product Compliance Declaration
+  version: 1.0.0
+  description: Molex compliance declaration with substance rows
+  author: Material Extractor Team
+  source_type: pdf
+  page_indices:
+  - 0
+  - 1
+  detection_method: text_pattern
+  detection_keywords:
+  - Product Compliance Declaration
+  - molex
+  - Product Composition
+  header_keywords:
+  - Name
+  - Type
+  - CAS
+  - Mass
+  validation_rules:
+    min_rows: 2
+    min_cols: 5
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: pdf_table
+  extractor_class: MolexComplianceExtractor
+  pages:
+  - 0
+  - 1
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true
