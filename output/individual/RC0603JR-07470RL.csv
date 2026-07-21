@@ -1,0 +1,15 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Aluminum Oxide (Al2O3),1344-28-1,2.13120,Metal Oxide,Al2O3,template13,RC0603JR-07470RL.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.04440,Metal Oxide,SiO2,template13,RC0603JR-07470RL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.04440,Metal Oxide,MgO,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.02095,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Palladium (Pd),7440-05-3,0.00032,Metal,Pd,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.00964,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.00152,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Ruthenium Oxide (RuO2),12036-10-1,0.01092,Metal Oxide,RuO2,template13,RC0603JR-07470RL.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00273,Glass,Glass Frit( contain Pb,template13,RC0603JR-07470RL.pdf
+Nickel (Ni),7440-02-0,0.10336,Metal,Ni,template13,RC0603JR-07470RL.pdf
+Tin (Sn),7440-31-5,0.05405,Metal,Sn,template13,RC0603JR-07470RL.pdf
+Lead-Free Glass (Bi-Si-B),65997-17-3,0.02137,Glass,"Glass (Pb free) (contains Bismuth, Silicon & Boron)",template13,RC0603JR-07470RL.pdf
+Epoxy Resin,25068-38-6,0.02824,Polymer,Epoxy resin,template13,RC0603JR-07470RL.pdf
+Epoxy Resin,25068-38-6,0.00034,Polymer,Epoxy resin,template13,RC0603JR-07470RL.pdf

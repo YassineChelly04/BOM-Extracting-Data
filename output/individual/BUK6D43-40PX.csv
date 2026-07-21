@@ -1,0 +1,21 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Silver (Ag),7440-22-4,0.056,Metal,Silver (Ag),template5,BUK6D43-40PX.xlsx
+Poly(isobornyl methacrylate) (PIBMA),64114-51-8,0.007,Polymer,Poly(isobornyl) methacrylate,template5,BUK6D43-40PX.xlsx
+Polysiloxanes,63148-53-8,0.0007,Polymer,Polysiloxanes,template5,BUK6D43-40PX.xlsx
+Palladium (Pd),7440-05-3,0.000007,Metal,Palladium (Pd),template5,BUK6D43-40PX.xlsx
+Silicon (Si),7440-21-3,0.498,Metalloid,Silicon (Si),template5,BUK6D43-40PX.xlsx
+Copper (Cu),7440-50-8,2.704913,Metal,Copper (Cu),template5,BUK6D43-40PX.xlsx
+Nickel (Ni),7440-02-0,0.084353,Metal,Nickel (Ni),template5,BUK6D43-40PX.xlsx
+Silicon (Si),7440-21-3,0.018276,Metalloid,Silicon (Si),template5,BUK6D43-40PX.xlsx
+Magnesium (Mg),7439-95-4,0.004217,Metal,Magnesium (Mg),template5,BUK6D43-40PX.xlsx
+Nickel (Ni),7440-02-0,0.074013,Metal,Nickel (Ni),template5,BUK6D43-40PX.xlsx
+Palladium (Pd),7440-05-3,0.003266,Metal,Palladium (Pd),template5,BUK6D43-40PX.xlsx
+Gold (Au),7440-57-5,0.000962,Metal,Gold (Au),template5,BUK6D43-40PX.xlsx
+Fused Silica (SiO2),60676-86-0,2.238,Metal Oxide,Silica fused,template5,BUK6D43-40PX.xlsx
+Silicon Dioxide (SiO2),7631-86-9,0.8579,Metal Oxide,Silica,template5,BUK6D43-40PX.xlsx
+Aluminum Hydroxide (Al(OH)3),21645-51-2,0.1119,Hydroxide,Aluminium hydroxide (Al(OH)3),template5,BUK6D43-40PX.xlsx
+Bismuth (Bi),7440-69-9,0.01865,Metal,Bismuth (Bi),template5,BUK6D43-40PX.xlsx
+Carbon Black,1333-86-4,0.01865,Filler,Carbon black,template5,BUK6D43-40PX.xlsx
+Tin (Sn),7440-31-5,0.169898,Metal,Tin (Sn),template5,BUK6D43-40PX.xlsx
+Lead (Pb),7439-92-1,0.000008,Metal,Lead (Pb),template5,BUK6D43-40PX.xlsx
+Copper (Cu),7440-50-8,0.045431,Metal,Copper (Cu),template5,BUK6D43-40PX.xlsx

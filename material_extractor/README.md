@@ -1,203 +1,87 @@
 # Material Extractor
 
-Production-ready material declaration extraction and normalization system for electronics BOM/MD documents.
+Reads supplier material-declaration documents (PDF / XLSX) and produces a
+unified material composition report from a BOM.
 
-## Features
+## How it works
 
-- **Template-based extraction** - Declarative YAML templates for different manufacturer formats
-- **Auto-detection** - Automatic template matching via keywords, patterns, and table structure
-- **Scalable normalization** - External YAML dictionaries for material/substance names with fuzzy matching
-- **Multiple formats** - PDF (pdfplumber) and Excel (pandas/openpyxl) support
-- **Parallel processing** - Batch process directories with configurable workers
-- **Aggregation** - Automatic cross-template material aggregation
-- **CLI & API** - Both command-line and programmatic interfaces
-- **Extensible** - Easy to add new templates and normalization rules
-
-## Quick Start
-
-```bash
-# Install
-pip install -e .
-
-# Initialize project
-material-extractor init
-
-# Extract from single file
-material-extractor extract input.pdf -o output.csv
-
-# Extract from directory
-material-extractor run input_dir output_dir --parallel
-
-# Normalize materials
-material-extractor normalize output.csv
-
-# List templates
-material-extractor templates
+```
+input file  ──▶  templates/  ──▶  normalizer  ──▶  CSV
+                 (detect+extract)  (materials.yaml)
 ```
 
-## Project Structure
+1. **templates/** — one file per supplier format. Each exposes `detect(path)`
+   and `extract(path)`. The pipeline tries each template's `detect()` and the
+   first match extracts the rows.
+2. **normalizer** — maps raw material names to canonical names + categories
+   using `materials.yaml`.
+3. **pipeline** — writes one CSV per file under `output/individual/` and a
+   combined `output/all_materials.csv`.
+
+## Run
+
+```bash
+python -m material_extractor <file-or-dir> [--output output]
+
+# examples
+python -m material_extractor templates/test_files
+python -m material_extractor ../Data --output output
+```
+
+## Add a new supplier format
+
+Create `templates/template14.py` with two functions:
+
+```python
+def detect(path: str) -> bool:
+    # return True if this file is your format
+    ...
+
+def extract(path: str) -> list[dict]:
+    # return rows like {"material": ..., "substance": ..., "weight_mg": ...}
+    ...
+```
+
+That's it — the pipeline discovers it automatically. No registration, no YAML
+template, no wiring.
+
+## Add / teach a new material
+
+Add one entry to `materials.yaml`:
+
+```yaml
+Copper (Cu):
+  category: Metal
+  aliases:
+  - copper
+  - cu
+```
+
+Any raw name matching an alias (case-insensitive) normalizes to the canonical
+name and category.
+
+## Layout
 
 ```
 material_extractor/
-├── src/material_extractor/
-│   ├── cli/                 # Command-line interface
-│   │   ├── main.py          # Main entry point
-│   │   └── commands/        # Subcommands
-│   ├── core/                # Core pipeline
-│   │   ├── pipeline.py      # Extraction pipeline
-│   │   ├── detector.py      # Template detection
-│   │   └── extractor.py     # Base extractors
-│   ├── extractors/          # Template-specific extractors
-│   ├── models/              # Pydantic data models
-│   ├── normalization/       # Material normalization
-│   │   ├── normalizer.py    # Scalable normalizer
-│   │   └── data/            # YAML dictionaries
-│   ├── templates/           # Template registry
-│   │   ├── registry.py      # Template management
-│   │   └── defaults.py      # Built-in templates
-│   └── config.py            # Configuration
-├── templates/               # User templates (YAML)
-│   ├── pdf/
-│   └── excel/
-├── data/                    # Normalization data
-│   └── normalization/
-│       ├── materials.yaml
-│       └── substances.yaml
-├── tests/                   # Test suite
-└── output/                  # Extraction outputs
+  templates/        one file per supplier + test_files/
+  materials.yaml    normalization data
+  normalizer.py     alias -> canonical + category
+  pipeline.py       detect -> extract -> normalize -> CSV
+  __main__.py       CLI entry point
+  tests/
+  output/
 ```
 
-## Built-in Templates
+## Notes
 
-| Template ID | Manufacturer | Format | Description |
-|-------------|--------------|--------|-------------|
-| `molex_bom` | Molex/TE | PDF | Annex 3 table with case sizes |
-| `wurth_md` | Würth | PDF | Semi-Component breakdown |
-| `molex_compliance` | Molex | PDF | Product Compliance Declaration |
-| `vishay_mlcc` | Vishay | PDF | MLCC material declaration |
-| `samsung_mlcc` | Samsung | Excel | MLCC Excel format |
-| `yageo_mlcc` | Yageo | Excel | MLCC Excel format |
+- `template4.py` handles a scanned form via OCR and needs the optional extras:
+  `pip install -e ".[ocr]"`. If those deps are missing the pipeline just skips
+  that template.
+- Weights are normalized to milligrams inside each template.
 
-## Adding New Templates
-
-Create a YAML file in `templates/pdf/` or `templates/excel/`:
-
-```yaml
-metadata:
-  template_id: "my_vendor_md"
-  name: "My Vendor Material Declaration"
-  version: "1.0.0"
-  source_type: "pdf"
-  page_indices: [0]
-  detection_method: "text_pattern"
-  detection_keywords:
-    - "Material Declaration"
-    - "MyVendor"
-  header_keywords:
-    - "Material"
-    - "Weight"
-  priority: 10
-  enabled: true
-
-extraction:
-  extractor_type: "pdf_table"
-  extractor_class: "GenericPDFTableExtractor"
-  target_size: "0603"
-
-normalization: {}
-
-output:
-  fields: ["material", "substance", "weight_mg"]
-  include_raw: true
-```
-
-Then reload: `material-extractor init` or restart the pipeline.
-
-## Normalization
-
-Materials are normalized using external YAML files in `data/normalization/`:
-
-```yaml
-# materials.yaml
-"Copper (Cu)":
-  category: "Metal"
-  aliases:
-    - "copper"
-    - "cu"
-    - "copper (cu)"
-
-# substances.yaml  
-"Copper (Cu)":
-  aliases:
-    - "cu"
-    - "copper"
-  cas_number: "7440-50-8"
-```
-
-The normalizer uses:
-1. Exact alias match (highest confidence)
-2. Fuzzy matching (configurable threshold)
-3. Category mapping
-
-Add new materials via CLI:
-```bash
-material-extractor normalize add-material "New Material" Metal --aliases "alias1,alias2"
-```
-
-## Configuration
-
-Create `.env` or `config.yaml`:
-
-```yaml
-data_dir: "data"
-templates_dir: "templates"
-output_dir: "output"
-max_workers: 4
-fuzzy_match_threshold: 0.85
-default_category: "Unknown"
-```
-
-## Output Formats
-
-- **CSV** - Standard tabular output
-- **JSON** - Structured with metadata
-- **Parquet** - Columnar for analytics
-- **Aggregated** - Cross-file material summary
-
-## Testing
+## Test
 
 ```bash
-# Run all tests
 pytest
-
-# With coverage
-pytest --cov=material_extractor
-
-# Specific test types
-pytest -m unit
-pytest -m integration
-```
-
-## Architecture
-
-```
-Input File
-    │
-    ▼
-Template Detection (keywords/patterns/headers)
-    │
-    ▼
-Extractor (PDF/Excel specific)
-    │
-    ▼
-Raw Material Records
-    │
-    ▼
-Normalization (alias/fuzzy/CAS)
-    │
-    ▼
-Normalized Records + Categories
-    │
-    ▼
-Output (CSV/JSON) + Aggregation
 ```

@@ -1,0 +1,445 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Aluminum Oxide (Al2O3),1344-28-1,0.00245,Metal Oxide,ALUMINUM OXIDE,template6,0603ZC104KAT2A.pdf
+Barium Oxide (BaO),1304-28-5,2.8236,Metal Oxide,BARIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Calcium Oxide (CaO),1305-78-8,0.0076,Metal Oxide,CALCIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Tricobalt Tetraoxide (Co3O4),1308-06-1,0.0002,Metal Oxide,TRICOBALT TETRAOXIDE,template6,0603ZC104KAT2A.pdf
+Magnesium Oxide (MgO),1309-48-4,0.0045,Metal Oxide,MAGNESIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Manganese Dioxide (MnO2),1313-13-9,0.0025,Metal Oxide,MANGANESE DIOXIDE,template6,0603ZC104KAT2A.pdf
+Antimony Trioxide (Sb2O3),1309-64-4,0.00365,Metal Oxide,DIANTIMONY TRIOXIDE,template6,0603ZC104KAT2A.pdf
+Strontium Oxide (SrO),1314-11-0,0.0008,Metal Oxide,STRONTIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Anatase (TiO2),1317-70-0,1.4005,Metal Oxide,ANATASE,template6,0603ZC104KAT2A.pdf
+Yttrium Oxide (Y2O3),1314-36-9,0.0385,Metal Oxide,YTTRIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Zinc Oxide (ZnO),1314-13-2,0.00765,Metal Oxide,ZINC OXIDE,template6,0603ZC104KAT2A.pdf
+Zirconium Dioxide (ZrO2),1314-23-4,0.002,Metal Oxide,ZIRCONIUM DIOXIDE,template6,0603ZC104KAT2A.pdf
+Sulphur Trioxide (SO3),7446-11-9,0.00075,Metal Oxide,SULPHUR TRIOXIDE,template6,0603ZC104KAT2A.pdf
+Nickel (Ni),7440-02-0,0.2044,Metal,NICKEL,template6,0603ZC104KAT2A.pdf
+Nickel (Ni),7440-02-0,0.114,Metal,NICKEL,template6,0603ZC104KAT2A.pdf
+Tin (Sn),7440-31-5,0.12835,Metal,TIN,template6,0603ZC104KAT2A.pdf
+Copper Oxide (CuO),1317-38-0,0.35175,Metal Oxide,COPPER OXIDE,template6,0603ZC104KAT2A.pdf
+Carbon Black,1333-86-4,0.139,Filler,Carbon black,template3,1051640001.pdf
+Liquid Crystal Polymer (LCP),,18.836,Polymer,LCP,template3,1051640001.pdf
+Additives (Trade Secret),system,0.416,Additive,"Further Additives, not to declare",template3,1051640001.pdf
+Glass Fiber,,8.31,Composite,GF-Fibre,template3,1051640001.pdf
+Copper (Cu),7440-50-8,7.95,Metal,Copper,template3,1051640001.pdf
+Zinc (metal),7440-66-6,4.05,Unknown,Zinc (metal),template3,1051640001.pdf
+Cobalt (Co),7440-48-4,0.00002,Metal,Cobalt,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.00002,Metal,Nickel,template3,1051640001.pdf
+Gold (Au),7440-57-5,0.006,Metal,Gold,template3,1051640001.pdf
+Palladium (Pd),7440-05-3,0.008,Metal,Palladium,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.002,Metal,Nickel,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.583,Metal,Nickel,template3,1051640001.pdf
+Chromium (Cr),7440-47-3,35.131,Metal,Chromium,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,17.103,Metal,Nickel,template3,1051640001.pdf
+Iron (Fe),7439-89-6,132.666,Metal,Iron,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,2.8,Metal,Nickel,template3,1051640001.pdf
+Tin (Sn),7440-31-5,5.6,Metal,Tin,template3,1051640001.pdf
+Aluminum oxide(Al2O3),,4.7,Unknown,Aluminum oxide(Al2O3),template2,150060BS75000.pdf
+Gallium nitride(GaN),,3.5,Unknown,Gallium nitride(GaN),template2,150060BS75000.pdf
+Indium nitride(InN),,1.8,Unknown,Indium nitride(InN),template2,150060BS75000.pdf
+Gold(Au),,10.0,Unknown,Gold(Au),template2,150060BS75000.pdf
+Epoxy Resin (Bisphenol A DGEBA),,7.5,Polymer,Bisphenol A diglycidyl ether resin,template2,150060BS75000.pdf
+Additives (Trade Secret),,2.5,Additive,Trade secret,template2,150060BS75000.pdf
+Bisphenol A-Bisphenol A diglycidyl ether polymer,,9.7,Unknown,Bisphenol A-Bisphenol A diglycidyl ether polymer,template2,150060BS75000.pdf
+Additives (Trade Secret),,0.3,Additive,Trade secret,template2,150060BS75000.pdf
+Epoxy Resin (Bisphenol A DGEBA),,2.8,Polymer,Bisphenol A diglycidyl ether resin,template2,150060BS75000.pdf
+Epoxy Resin (o-Cresol Novolac),,2.047,Polymer,"o-Cresol, formaldehyde, epichlorohydrin polymer",template2,150060BS75000.pdf
+Glass Fiber,,2.0,Composite,Glass fiber,template2,150060BS75000.pdf
+Epoxy Resin (Phenol-Formaldehyde),,3.153,Polymer,"Formaldehyde, polymer with (chloromethyl)oxirane and phenol",template2,150060BS75000.pdf
+Nickel(Ni),,4.4,Unknown,Nickel(Ni),template2,150060BS75000.pdf
+Copper(Cu),,5.5,Unknown,Copper(Cu),template2,150060BS75000.pdf
+Gold(Au),,0.1,Unknown,Gold(Au),template2,150060BS75000.pdf
+PC+PBT,,260.435,Unknown,PC+PBT,template3,50-57-9404.pdf
+Glass Fiber,,165.218,Composite,GF-Fibre,template3,50-57-9404.pdf
+"Flame Retardant, ISO 1043-4 FR(17)",,46.087,Unknown,"Flame Retardant, ISO 1043-4 FR(17)",template3,50-57-9404.pdf
+Antimonytrioxide,1309-64-4,16.087,Unknown,Antimonytrioxide,template3,50-57-9404.pdf
+"Pigment portion, not to declare",system,6.087,Unknown,"Pigment portion, not to declare",template3,50-57-9404.pdf
+Additives (Trade Secret),system,6.087,Additive,"Further Additives, not to declare",template3,50-57-9404.pdf
+Barium titanium oxide(BaTiO3),,11.0446,Unknown,Barium titanium oxide(BaTiO3),template2,885012207103.pdf
+Yttrium Oxide (Y2O3),,0.2254,Metal Oxide,Yttrium oxide,template2,885012207103.pdf
+Barium titanium oxide(BaTiO3),,2.254,Unknown,Barium titanium oxide(BaTiO3),template2,885012207103.pdf
+Nickel(Ni),,9.016,Unknown,Nickel(Ni),template2,885012207103.pdf
+Glass Fiber,,1.3524,Composite,Glass fiber,template2,885012207103.pdf
+Copper(Cu),,9.9176,Unknown,Copper(Cu),template2,885012207103.pdf
+Nickel(Ni),,11.27,Unknown,Nickel(Ni),template2,885012207103.pdf
+Tin(Sn),,11.27,Unknown,Tin(Sn),template2,885012207103.pdf
+Silver (Ag),7440-22-4,0.056,Metal,Silver (Ag),template5,BUK6D43-40PX.xlsx
+Poly(isobornyl methacrylate) (PIBMA),64114-51-8,0.007,Polymer,Poly(isobornyl) methacrylate,template5,BUK6D43-40PX.xlsx
+Polysiloxanes,63148-53-8,0.0007,Polymer,Polysiloxanes,template5,BUK6D43-40PX.xlsx
+Palladium (Pd),7440-05-3,0.000007,Metal,Palladium (Pd),template5,BUK6D43-40PX.xlsx
+Silicon (Si),7440-21-3,0.498,Metalloid,Silicon (Si),template5,BUK6D43-40PX.xlsx
+Copper (Cu),7440-50-8,2.704913,Metal,Copper (Cu),template5,BUK6D43-40PX.xlsx
+Nickel (Ni),7440-02-0,0.084353,Metal,Nickel (Ni),template5,BUK6D43-40PX.xlsx
+Silicon (Si),7440-21-3,0.018276,Metalloid,Silicon (Si),template5,BUK6D43-40PX.xlsx
+Magnesium (Mg),7439-95-4,0.004217,Metal,Magnesium (Mg),template5,BUK6D43-40PX.xlsx
+Nickel (Ni),7440-02-0,0.074013,Metal,Nickel (Ni),template5,BUK6D43-40PX.xlsx
+Palladium (Pd),7440-05-3,0.003266,Metal,Palladium (Pd),template5,BUK6D43-40PX.xlsx
+Gold (Au),7440-57-5,0.000962,Metal,Gold (Au),template5,BUK6D43-40PX.xlsx
+Fused Silica (SiO2),60676-86-0,2.238,Metal Oxide,Silica fused,template5,BUK6D43-40PX.xlsx
+Silicon Dioxide (SiO2),7631-86-9,0.8579,Metal Oxide,Silica,template5,BUK6D43-40PX.xlsx
+Aluminum Hydroxide (Al(OH)3),21645-51-2,0.1119,Hydroxide,Aluminium hydroxide (Al(OH)3),template5,BUK6D43-40PX.xlsx
+Bismuth (Bi),7440-69-9,0.01865,Metal,Bismuth (Bi),template5,BUK6D43-40PX.xlsx
+Carbon Black,1333-86-4,0.01865,Filler,Carbon black,template5,BUK6D43-40PX.xlsx
+Tin (Sn),7440-31-5,0.169898,Metal,Tin (Sn),template5,BUK6D43-40PX.xlsx
+Lead (Pb),7439-92-1,0.000008,Metal,Lead (Pb),template5,BUK6D43-40PX.xlsx
+Copper (Cu),7440-50-8,0.045431,Metal,Copper (Cu),template5,BUK6D43-40PX.xlsx
+Calcium Zirconate (CaZrO3),CaZrO3,0.89,Ceramic,Calcium Zirconate,template1,C0402C102J3GACTU.pdf
+Additives (Undisclosed),,0.16,Additive,Miscellaneous,template1,C0402C102J3GACTU.pdf
+Electrode Paste (Ni),Ni,0.06,Paste,Electrode paste,template1,C0402C102J3GACTU.pdf
+Base Metal (Cu),Cu,0.01,Metal,Base Metal,template1,C0402C102J3GACTU.pdf
+Under Layer (Ni),Ni,0.03,Plating,Under layer,template1,C0402C102J3GACTU.pdf
+Finish Plating (Sn),Sn,0.05,Plating,Finish plating,template1,C0402C102J3GACTU.pdf
+Barium Titanate (BaTiO3),12047-27-7,20.025,Ceramic,Barium Titanate,template4,CL31B105KCHNNNE.pdf
+Nickel (Ni),7440-02-0,0.96,Metal,Nickel,template4,CL31B105KCHNNNE.pdf
+Copper (Cu),7440-50-8,0.337,Metal,Copper,template4,CL31B105KCHNNNE.pdf
+Nickel (Ni),7440-02-0,0.037,Metal,Nickel,template4,CL31B105KCHNNNE.pdf
+Tin (Sn),7440-31-5,0.141,Metal,Tin,template4,CL31B105KCHNNNE.pdf
+Glass Oxide,65997-17-3,0.00022,Glass,"Glass, oxide",template9,CRCW0402680RJNED.pdf
+Silver (Ag),7440-22-4,0.00619,Metal,Silver,template9,CRCW0402680RJNED.pdf
+Aluminum Oxide (Al2O3),1344-28-1,0.48894,Metal Oxide,Aluminium oxide,template9,CRCW0402680RJNED.pdf
+Calcium Oxide (CaO),1305-78-8,0.00102,Metal Oxide,Calcium oxide,template9,CRCW0402680RJNED.pdf
+Magnesium Oxide (MgO),1309-48-4,0.00407,Metal Oxide,Magnesium oxide,template9,CRCW0402680RJNED.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.01528,Metal Oxide,Silicon dioxide,template9,CRCW0402680RJNED.pdf
+Chromium (Cr),7440-47-3,0.00009,Metal,Chromium,template9,CRCW0402680RJNED.pdf
+Copper (Cu),7440-50-8,0.00004,Metal,Copper,template9,CRCW0402680RJNED.pdf
+Nickel (Ni),7440-02-0,0.00015,Metal,Nickel,template9,CRCW0402680RJNED.pdf
+Nickel (Ni),7440-02-0,0.03311,Metal,Nickel,template9,CRCW0402680RJNED.pdf
+Carbon Black,1333-86-4,0.00039,Filler,Carbon black,template9,CRCW0402680RJNED.pdf
+Epoxy Resin,25068-38-6,0.00936,Polymer,Epoxy resin,template9,CRCW0402680RJNED.pdf
+Silicon Dioxide (SiO2),60676-86-0,0.00325,Metal Oxide,Silicon dioxide,template9,CRCW0402680RJNED.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00373,Glass,Lead silicate [Glass],template9,CRCW0402680RJNED.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00223,Glass,Lead silicate [Glass],template9,CRCW0402680RJNED.pdf
+Palladium (Pd),7440-05-3,0.00056,Metal,Palladium,template9,CRCW0402680RJNED.pdf
+Ruthenium Oxide (RuO2),12036-10-1,0.00216,Metal Oxide,Ruthenium oxide,template9,CRCW0402680RJNED.pdf
+Silver (Ag),7440-22-4,0.00249,Metal,Silver,template9,CRCW0402680RJNED.pdf
+Tin (Sn),7440-31-5,0.03311,Metal,Tin,template9,CRCW0402680RJNED.pdf
+Glass Oxide,65997-17-3,0.00027,Glass,"Glass, oxide",template9,CRCW0402680RJNED.pdf
+Palladium (Pd),7440-05-3,0.00007,Metal,Palladium,template9,CRCW0402680RJNED.pdf
+Silver (Ag),7440-22-4,0.01321,Metal,Silver,template9,CRCW0402680RJNED.pdf
+Glass Oxide,65997-17-3,0.00020,Glass,"Glass, oxide",template9,CRCW060310K0JNEA.pdf
+Silver (Ag),7440-22-4,0.00562,Metal,Silver,template9,CRCW060310K0JNEA.pdf
+Aluminum Oxide (Al2O3),1344-28-1,1.73908,Metal Oxide,Aluminium oxide,template9,CRCW060310K0JNEA.pdf
+Calcium Oxide (CaO),1305-78-8,0.00362,Metal Oxide,Calcium oxide,template9,CRCW060310K0JNEA.pdf
+Magnesium Oxide (MgO),1309-48-4,0.02355,Metal Oxide,Magnesium oxide,template9,CRCW060310K0JNEA.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.04529,Metal Oxide,Silicon dioxide,template9,CRCW060310K0JNEA.pdf
+Chromium (Cr),7440-47-3,0.00022,Metal,Chromium,template9,CRCW060310K0JNEA.pdf
+Copper (Cu),7440-50-8,0.00009,Metal,Copper,template9,CRCW060310K0JNEA.pdf
+Nickel (Ni),7440-02-0,0.00027,Metal,Nickel,template9,CRCW060310K0JNEA.pdf
+Nickel (Ni),7440-02-0,0.07410,Metal,Nickel,template9,CRCW060310K0JNEA.pdf
+Carbon Black,1333-86-4,0.00180,Filler,Carbon black,template9,CRCW060310K0JNEA.pdf
+Epoxy Resin,25068-38-6,0.01400,Polymer,Epoxy resin,template9,CRCW060310K0JNEA.pdf
+Silicon Dioxide (SiO2),60676-86-0,0.01192,Metal Oxide,Silicon dioxide,template9,CRCW060310K0JNEA.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00749,Glass,Lead silicate [Glass],template9,CRCW060310K0JNEA.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00480,Glass,Lead silicate [Glass],template9,CRCW060310K0JNEA.pdf
+Palladium (Pd),7440-05-3,0.00069,Metal,Palladium,template9,CRCW060310K0JNEA.pdf
+Ruthenium Oxide (RuO2),12036-10-1,0.00363,Metal Oxide,Ruthenium oxide,template9,CRCW060310K0JNEA.pdf
+Silver (Ag),7440-22-4,0.00459,Metal,Silver,template9,CRCW060310K0JNEA.pdf
+Tin (Sn),7440-31-5,0.07410,Metal,Tin,template9,CRCW060310K0JNEA.pdf
+Glass Oxide,65997-17-3,0.00037,Glass,"Glass, oxide",template9,CRCW060310K0JNEA.pdf
+Palladium (Pd),7440-05-3,0.00012,Metal,Palladium,template9,CRCW060310K0JNEA.pdf
+Silver (Ag),7440-22-4,0.02430,Metal,Silver,template9,CRCW060310K0JNEA.pdf
+Glass Oxide,65997-17-3,0.00020,Glass,"Glass, oxide",template9,CRCW0603150KFKEA.pdf
+Silver (Ag),7440-22-4,0.00562,Metal,Silver,template9,CRCW0603150KFKEA.pdf
+Aluminum Oxide (Al2O3),1344-28-1,1.73908,Metal Oxide,Aluminium oxide,template9,CRCW0603150KFKEA.pdf
+Calcium Oxide (CaO),1305-78-8,0.00362,Metal Oxide,Calcium oxide,template9,CRCW0603150KFKEA.pdf
+Magnesium Oxide (MgO),1309-48-4,0.02355,Metal Oxide,Magnesium oxide,template9,CRCW0603150KFKEA.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.04529,Metal Oxide,Silicon dioxide,template9,CRCW0603150KFKEA.pdf
+Chromium (Cr),7440-47-3,0.00022,Metal,Chromium,template9,CRCW0603150KFKEA.pdf
+Copper (Cu),7440-50-8,0.00009,Metal,Copper,template9,CRCW0603150KFKEA.pdf
+Nickel (Ni),7440-02-0,0.00027,Metal,Nickel,template9,CRCW0603150KFKEA.pdf
+Nickel (Ni),7440-02-0,0.07410,Metal,Nickel,template9,CRCW0603150KFKEA.pdf
+Carbon Black,1333-86-4,0.00180,Filler,Carbon black,template9,CRCW0603150KFKEA.pdf
+Epoxy Resin,25068-38-6,0.01400,Polymer,Epoxy resin,template9,CRCW0603150KFKEA.pdf
+Silicon Dioxide (SiO2),60676-86-0,0.01192,Metal Oxide,Silicon dioxide,template9,CRCW0603150KFKEA.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00749,Glass,Lead silicate [Glass],template9,CRCW0603150KFKEA.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00480,Glass,Lead silicate [Glass],template9,CRCW0603150KFKEA.pdf
+Palladium (Pd),7440-05-3,0.00069,Metal,Palladium,template9,CRCW0603150KFKEA.pdf
+Ruthenium Oxide (RuO2),12036-10-1,0.00363,Metal Oxide,Ruthenium oxide,template9,CRCW0603150KFKEA.pdf
+Silver (Ag),7440-22-4,0.00459,Metal,Silver,template9,CRCW0603150KFKEA.pdf
+Tin (Sn),7440-31-5,0.07410,Metal,Tin,template9,CRCW0603150KFKEA.pdf
+Glass Oxide,65997-17-3,0.00037,Glass,"Glass, oxide",template9,CRCW0603150KFKEA.pdf
+Palladium (Pd),7440-05-3,0.00012,Metal,Palladium,template9,CRCW0603150KFKEA.pdf
+Silver (Ag),7440-22-4,0.02430,Metal,Silver,template9,CRCW0603150KFKEA.pdf
+Copper (Cu),7440-50-8,110,Metal,Copper,template10,D3082-05.pdf
+Zinc (Zn),7440-66-6,65.3,Metal,Zinc,template10,D3082-05.pdf
+Lead (Pb),7439-92-1,3.58,Metal,Lead,template10,D3082-05.pdf
+Nickel (Ni),7440-02-0,1.6,Metal,Nickel,template10,D3082-05.pdf
+Gold (Au),7440-57-5,0.173,Metal,Gold,template10,D3082-05.pdf
+Tin (Sn),7440-31-5,2.62,Metal,Tin,template10,D3082-05.pdf
+Barium titanate(IV),12047-27-7,5.33,Unknown,Barium titanate(IV),template11,EMK107B7105KAHT.pdf
+Nickel (Ni),7440-02-0,0.755,Metal,Nickel,template11,EMK107B7105KAHT.pdf
+Nickel (Ni),7440-02-0,0.311,Metal,Nickel,template11,EMK107B7105KAHT.pdf
+Copper (Cu),7440-50-8,0.04,Metal,Copper,template11,EMK107B7105KAHT.pdf
+Nickel (Ni),7440-02-0,0.024,Metal,Nickel,template11,EMK107B7105KAHT.pdf
+Tin (Sn),7440-31-5,0.04,Metal,Tin,template11,EMK107B7105KAHT.pdf
+Barium titanate(IV),12047-27-7,5.33,Unknown,Barium titanate(IV),template11,EMK107BB7225KA-T.pdf
+Nickel (Ni),7440-02-0,0.755,Metal,Nickel,template11,EMK107BB7225KA-T.pdf
+Nickel (Ni),7440-02-0,0.311,Metal,Nickel,template11,EMK107BB7225KA-T.pdf
+Copper (Cu),7440-50-8,0.04,Metal,Copper,template11,EMK107BB7225KA-T.pdf
+Nickel (Ni),7440-02-0,0.024,Metal,Nickel,template11,EMK107BB7225KA-T.pdf
+Tin (Sn),7440-31-5,0.04,Metal,Tin,template11,EMK107BB7225KA-T.pdf
+Aluminum Oxide (Al2O3),1344-28-1,4.3718,Metal Oxide,aluminum oxide,template12,HCJ0805ZT0R00.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.1366,Metal Oxide,silicon dioxide,template12,HCJ0805ZT0R00.pdf
+Magnesium Oxide (MgO),1309-48-4,0.0455,Metal Oxide,magnesium oxide,template12,HCJ0805ZT0R00.pdf
+Copper (Cu),7440-50-8,1.6698,Metal,copper,template12,HCJ0805ZT0R00.pdf
+Copper (Cu),7440-50-8,0.9510,Metal,copper,template12,HCJ0805ZT0R00.pdf
+Epoxy Resin,25085-99-8,0.0683,Polymer,epoxy,template12,HCJ0805ZT0R00.pdf
+Barium Sulfate (BaSO4),,0.0668,Salt,barium sulfate,template12,HCJ0805ZT0R00.pdf
+Pigment (Unknown 1),,0.0008,Pigment,pigment 1,template12,HCJ0805ZT0R00.pdf
+Pigment (Unknown 2),,0.0008,Pigment,pigment 2,template12,HCJ0805ZT0R00.pdf
+Solvent (Aromatic Naphtha),,0.0152,Solvent,naphtha,template12,HCJ0805ZT0R00.pdf
+Epoxy Resin,25068-38-6,0.0759,Polymer,epoxy resin,template12,HCJ0805ZT0R00.pdf
+Nickel (Ni),7440-02-0,0.0797,Metal,nickel,template12,HCJ0805ZT0R00.pdf
+Nickel (Ni),7440-02-0,0.0085,Metal,nickel,template12,HCJ0805ZT0R00.pdf
+Chromium (Cr),7440-47-3,0.0021,Metal,chromium,template12,HCJ0805ZT0R00.pdf
+Tin (Sn),7440-31-5,0.0972,Metal,tin,template12,HCJ0805ZT0R00.pdf
+Gold (Au),7440-57-5,0.066925,Metal,Gold,template7,INA240A2PWR.xlsx
+Silver (Ag),7440-22-4,0.000001,Metal,Silver,template7,INA240A2PWR.xlsx
+Silver (Ag),7440-22-4,0.62268,Metal,Silver,template7,INA240A2PWR.xlsx
+Epoxy Resin,85954-11-6,0.15567,Polymer,Epoxy,template7,INA240A2PWR.xlsx
+Copper (Cu),7440-50-8,12.6633,Metal,Copper,template7,INA240A2PWR.xlsx
+Iron (Fe),7439-89-6,0.312,Metal,Iron,template7,INA240A2PWR.xlsx
+Phosphorus (P),7723-14-0,0.0039,Non-Metal,Phosphorus,template7,INA240A2PWR.xlsx
+Lead (Pb),7439-92-1,0.0039,Metal,Lead,template7,INA240A2PWR.xlsx
+Tin (Sn),7440-31-5,0.0039,Metal,Tin,template7,INA240A2PWR.xlsx
+Zinc (Zn),7440-66-6,0.013,Metal,Zinc,template7,INA240A2PWR.xlsx
+Nickel (Ni),7440-02-0,0.247312,Metal,Nickel,template7,INA240A2PWR.xlsx
+Gold (Au),7440-57-5,0.002028,Metal,Gold,template7,INA240A2PWR.xlsx
+Palladium (Pd),7440-05-3,0.01066,Metal,Palladium,template7,INA240A2PWR.xlsx
+Fused Silica (SiO2),60676-86-0,21.344571,Metal Oxide,Fused Silica,template7,INA240A2PWR.xlsx
+Carbon Black,1333-86-4,0.074458,Filler,Carbon Black,template7,INA240A2PWR.xlsx
+Organic Phosphorus,1330-78-5,0.136506,Unknown,Organic Phosphorus,template7,INA240A2PWR.xlsx
+Epoxy Resin,85954-11-6,3.263734,Polymer,Epoxy,template7,INA240A2PWR.xlsx
+Doped Silicon (Si),7440-21-3,2.54743,Metalloid,Doped Silicon,template7,INA240A2PWR.xlsx
+Gold (Au),7440-57-5,0.064148,Metal,Gold,template7,LM27313XQMFNOPB.xlsx
+Silver (Ag),7440-22-4,0.180193,Metal,Silver,template7,LM27313XQMFNOPB.xlsx
+Epoxy Resin,85954-11-6,0.060064,Polymer,Epoxy,template7,LM27313XQMFNOPB.xlsx
+Copper (Cu),7440-50-8,5.436408,Metal,Copper,template7,LM27313XQMFNOPB.xlsx
+Iron (Fe),7439-89-6,0.134065,Metal,Iron,template7,LM27313XQMFNOPB.xlsx
+Phosphorus (P),7723-14-0,0.00169,Non-Metal,Phosphorus,template7,LM27313XQMFNOPB.xlsx
+Silver (Ag),7440-22-4,0.054077,Metal,Silver,template7,LM27313XQMFNOPB.xlsx
+Zinc (Zn),7440-66-6,0.00676,Metal,Zinc,template7,LM27313XQMFNOPB.xlsx
+Tin (Sn),7440-31-5,0.7,Metal,Tin,template7,LM27313XQMFNOPB.xlsx
+Silicon Dioxide (SiO2),7631-86-9,9.570072,Metal Oxide,Silica,template7,LM27313XQMFNOPB.xlsx
+Metal Hydroxide,Trade Secret,0.323678,Unknown,Metal Hydroxide,template7,LM27313XQMFNOPB.xlsx
+Carbon Black,1333-86-4,0.032368,Filler,Carbon Black,template7,LM27313XQMFNOPB.xlsx
+Epoxy Resin,85954-11-6,0.863141,Polymer,Epoxy,template7,LM27313XQMFNOPB.xlsx
+Doped Silicon (Si),7440-21-3,0.812161,Metalloid,Doped Silicon,template7,LM27313XQMFNOPB.xlsx
+Copper (Cu),7440-50-8,0.020894,Metal,Copper,template7,LMH6642MFNOPB.xlsx
+Gold (Au),7440-57-5,0.000118,Metal,Gold,template7,LMH6642MFNOPB.xlsx
+Palladium (Pd),7440-05-3,0.000603,Metal,Palladium,template7,LMH6642MFNOPB.xlsx
+Silver (Ag),7440-22-4,0.09,Metal,Silver,template7,LMH6642MFNOPB.xlsx
+Epoxy Resin,85954-11-6,0.03,Polymer,Epoxy,template7,LMH6642MFNOPB.xlsx
+Copper (Cu),7440-50-8,5.31834,Metal,Copper,template7,LMH6642MFNOPB.xlsx
+Iron (Fe),7439-89-6,0.14248,Metal,Iron,template7,LMH6642MFNOPB.xlsx
+Phosphorus (P),7723-14-0,0.00822,Non-Metal,Phosphorus,template7,LMH6642MFNOPB.xlsx
+Zinc (Zn),7440-66-6,0.01096,Metal,Zinc,template7,LMH6642MFNOPB.xlsx
+Fused Silica (SiO2),60676-86-0,10.590836,Metal Oxide,Fused Silica,template7,LMH6642MFNOPB.xlsx
+Carbon Black,1333-86-4,0.036105,Filler,Carbon Black,template7,LMH6642MFNOPB.xlsx
+Chlorine (Cl),7782-50-5,0.00012,Halogen,Chlorine,template7,LMH6642MFNOPB.xlsx
+Epoxy Resin,85954-11-6,1.407979,Polymer,Epoxy,template7,LMH6642MFNOPB.xlsx
+Doped Silicon (Si),7440-21-3,0.212404,Metalloid,Doped Silicon,template7,LMH6642MFNOPB.xlsx
+Gallium Arsenide (GaAs),1303-00-0,0.06889,Compound Semiconductor,GaAs,template8,LTST-C190KGKT.pdf
+Aluminum (Al),7429-90-5,0.003071,Metal,Al,template8,LTST-C190KGKT.pdf
+Gallium Phosphide (GaP),12063-98-8,0.002656,Compound Semiconductor,GaP,template8,LTST-C190KGKT.pdf
+Gold (Au),7440-57-5,0.001909,Metal,Au,template8,LTST-C190KGKT.pdf
+Indium (In),7440-74-6,0.006474,Metal,In,template8,LTST-C190KGKT.pdf
+Silver (Ag),7440-22-4,0.01275,Metal,Ag,template8,LTST-C190KGKT.pdf
+Epoxy Resin,29690-82-2,0.00225,Polymer,epoxy,template8,LTST-C190KGKT.pdf
+Glass Fiber,65997-17-3,0.3654,Composite,Fiber class,template8,LTST-C190KGKT.pdf
+Copper (Cu),7440-50-8,0.1218,Metal,copper,template8,LTST-C190KGKT.pdf
+Copper (Cu),7440-50-8,0.1596296296,Metal,Cu,template8,LTST-C190KGKT.pdf
+Nickel (Ni),7440-02-0,0.0305930185,Metal,Ni,template8,LTST-C190KGKT.pdf
+Silver (Ag),7440-22-4,0.0239444444,Metal,Ag,template8,LTST-C190KGKT.pdf
+Gold (Au),7440-57-5,0.0013329074,Metal,Au,template8,LTST-C190KGKT.pdf
+Solvent (Aromatic Naphtha),a64742-94-5,0.00255,Solvent,eavy aromatic solvent naphth,template8,LTST-C190KGKT.pdf
+Epoxy Resin (TGIC),2885-96-9,0.0051,Polymer,Triglycidyl isocyanurate,template8,LTST-C190KGKT.pdf
+Gold (Au),7440-57-5,0.05,Metal,Au,template8,LTST-C190KGKT.pdf
+Epidian,25068-38-6,0.4214,Unknown,Epidian,template8,LTST-C190KGKT.pdf
+Curing Agent (THPA),85~43-8,0.1806,Polymer Additive,Tetrahydrophthalic Anhydride,template8,LTST-C190KGKT.pdf
+Copper (Cu),7440-50-8,0.1797,Metal,Copper,template7,MSP430FR2355TPTR.xlsx
+Gold (Au),7440-57-5,0.001092,Metal,Gold,template7,MSP430FR2355TPTR.xlsx
+Palladium (Pd),7440-05-3,0.005312,Metal,Palladium,template7,MSP430FR2355TPTR.xlsx
+Silver (Ag),7440-22-4,0.000003,Metal,Silver,template7,MSP430FR2355TPTR.xlsx
+Silver (Ag),7440-22-4,0.793691,Metal,Silver,template7,MSP430FR2355TPTR.xlsx
+Epoxy Resin,85954-11-6,0.264564,Polymer,Epoxy,template7,MSP430FR2355TPTR.xlsx
+Copper (Cu),7440-50-8,83.328604,Metal,Copper,template7,MSP430FR2355TPTR.xlsx
+Iron (Fe),7439-89-6,2.089496,Metal,Iron,template7,MSP430FR2355TPTR.xlsx
+Phosphorus (P),7723-14-0,0.07062,Non-Metal,Phosphorus,template7,MSP430FR2355TPTR.xlsx
+Zinc (Zn),7440-66-6,0.11128,Metal,Zinc,template7,MSP430FR2355TPTR.xlsx
+Nickel (Ni),7440-02-0,0.283458,Metal,Nickel,template7,MSP430FR2355TPTR.xlsx
+Gold (Au),7440-57-5,0.002324,Metal,Gold,template7,MSP430FR2355TPTR.xlsx
+Palladium (Pd),7440-05-3,0.012218,Metal,Palladium,template7,MSP430FR2355TPTR.xlsx
+Fused Silica (SiO2),60676-86-0,106.168025,Metal Oxide,Fused Silica,template7,MSP430FR2355TPTR.xlsx
+Carbon Black,1333-86-4,0.361936,Filler,Carbon Black,template7,MSP430FR2355TPTR.xlsx
+Chlorine (Cl),7782-50-5,0.001206,Halogen,Chlorine,template7,MSP430FR2355TPTR.xlsx
+Epoxy Resin,85954-11-6,14.114315,Polymer,Epoxy,template7,MSP430FR2355TPTR.xlsx
+Doped Silicon (Si),7440-21-3,4.059463,Metalloid,Doped Silicon,template7,MSP430FR2355TPTR.xlsx
+Gold (Au),7440-57-5,0.078005,Metal,Gold,template7,P82B96DGKR.xlsx
+Silver (Ag),7440-22-4,0.220359,Metal,Silver,template7,P82B96DGKR.xlsx
+Epoxy Resin,85954-11-6,0.081502,Polymer,Epoxy,template7,P82B96DGKR.xlsx
+Copper (Cu),7440-50-8,9.65634,Metal,Copper,template7,P82B96DGKR.xlsx
+Iron (Fe),7439-89-6,0.0204,Metal,Iron,template7,P82B96DGKR.xlsx
+Nickel (Ni),7440-02-0,0.3264,Metal,Nickel,template7,P82B96DGKR.xlsx
+Silicon (Si),7440-21-3,0.08976,Metalloid,Silicon,template7,P82B96DGKR.xlsx
+Lead (Pb),7439-92-1,0.0051,Metal,Lead,template7,P82B96DGKR.xlsx
+Zinc (Zn),7440-66-6,0.102,Metal,Zinc,template7,P82B96DGKR.xlsx
+Nickel (Ni),7440-02-0,0.194045,Metal,Nickel,template7,P82B96DGKR.xlsx
+Gold (Au),7440-57-5,0.001591,Metal,Gold,template7,P82B96DGKR.xlsx
+Palladium (Pd),7440-05-3,0.008364,Metal,Palladium,template7,P82B96DGKR.xlsx
+Fused Silica (SiO2),60676-86-0,12.608714,Metal Oxide,Fused Silica,template7,P82B96DGKR.xlsx
+Carbon Black,1333-86-4,0.044501,Filler,Carbon Black,template7,P82B96DGKR.xlsx
+Epoxy Resin,85954-11-6,2.180566,Polymer,Epoxy,template7,P82B96DGKR.xlsx
+Doped Silicon (Si),7440-21-3,1.136361,Metalloid,Doped Silicon,template7,P82B96DGKR.xlsx
+Aluminum Oxide (Al2O3),1344-28-1,2.13120,Metal Oxide,Al2O3,template13,RC0603JR-07470RL.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.04440,Metal Oxide,SiO2,template13,RC0603JR-07470RL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.04440,Metal Oxide,MgO,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.02095,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Palladium (Pd),7440-05-3,0.00032,Metal,Pd,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.00964,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Silver (Ag),7440-22-4,0.00152,Metal,Ag,template13,RC0603JR-07470RL.pdf
+Ruthenium Oxide (RuO2),12036-10-1,0.01092,Metal Oxide,RuO2,template13,RC0603JR-07470RL.pdf
+Lead-Containing Glass Frit,65997-18-4,0.00273,Glass,Glass Frit( contain Pb,template13,RC0603JR-07470RL.pdf
+Nickel (Ni),7440-02-0,0.10336,Metal,Ni,template13,RC0603JR-07470RL.pdf
+Tin (Sn),7440-31-5,0.05405,Metal,Sn,template13,RC0603JR-07470RL.pdf
+Lead-Free Glass (Bi-Si-B),65997-17-3,0.02137,Glass,"Glass (Pb free) (contains Bismuth, Silicon & Boron)",template13,RC0603JR-07470RL.pdf
+Epoxy Resin,25068-38-6,0.02824,Polymer,Epoxy resin,template13,RC0603JR-07470RL.pdf
+Epoxy Resin,25068-38-6,0.00034,Polymer,Epoxy resin,template13,RC0603JR-07470RL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.07878,Metal Oxide,Magnesium Oxide,template9,RCA12060000ZSEA.pdf
+Aluminum Oxide (Al2O3),1344-28-1,7.61010,Metal Oxide,Aluminium Oxide,template9,RCA12060000ZSEA.pdf
+Silicon Dioxide (SiO2),7631-86-9,0.23155,Metal Oxide,Silicon Dioxide,template9,RCA12060000ZSEA.pdf
+Lead(2+) Silicate,10099-76-0,0.04450,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Chromium (III) Oxide,1308-38-9,0.00095,Unknown,Chromium (III) Oxide,template9,RCA12060000ZSEA.pdf
+Lead(2+) Silicate,10099-76-0,0.01322,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Silver (Ag),7440-22-4,0.01762,Metal,Silver,template9,RCA12060000ZSEA.pdf
+Lead(2+) Silicate,10099-76-0,0.00460,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Copper Oxide ( Derivaties-1),1317-38-0,0.00576,Unknown,Copper Oxide ( Derivaties-1),template9,RCA12060000ZSEA.pdf
+Nickel (Ni),7440-02-0,0.14766,Metal,Nickel,template9,RCA12060000ZSEA.pdf
+Silver (Ag),7440-22-4,0.21981,Metal,Silver,template9,RCA12060000ZSEA.pdf
+Tin (Sn),7440-31-5,0.27423,Metal,Tin,template9,RCA12060000ZSEA.pdf
+Chromium (Cr),7440-47-3,0.00000,Metal,Chromium,template9,RCA12060000ZSEA.pdf
+Copper (Cu),7440-50-8,0.00001,Metal,Copper,template9,RCA12060000ZSEA.pdf
+Epoxy Resine,25068-38-6,0.01725,Unknown,Epoxy Resine,template9,RCA12060000ZSEA.pdf
+Silicon Dioxide (SiO2),7631-86-9,0.12220,Metal Oxide,Silicon Dioxide,template9,RCA12060000ZSEA.pdf
+Aluminum Oxide (Al2O3),1344-28-1,1.85795,Metal Oxide,Al2O3,template13,RT0603BRC07500RL.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.05613,Metal Oxide,SiO2,template13,RT0603BRC07500RL.pdf
+Calcium Oxide (CaO),1305-78-8,0.01161,Metal Oxide,CaO,template13,RT0603BRC07500RL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.00968,Metal Oxide,MgO,template13,RT0603BRC07500RL.pdf
+Silver (Ag),7440-22-4,0.02105,Metal,Ag,template13,RT0603BRC07500RL.pdf
+Palladium (Pd),7440-05-3,0.00060,Metal,Pd,template13,RT0603BRC07500RL.pdf
+Glass frit (Contains Pb),65997-18-4,0.00010,Unknown,Glass frit (Contains Pb),template13,RT0603BRC07500RL.pdf
+Silver (Ag),7440-22-4,0.00814,Metal,Ag,template13,RT0603BRC07500RL.pdf
+Lead-Free Glass (Bi-Si-B),65997-17-3,0.00144,Glass,"Glass (Pb free) (contains Bismuth, Silicon & Boron)",template13,RT0603BRC07500RL.pdf
+Nickel (Ni),7440-02-0,0.00064,Metal,Ni,template13,RT0603BRC07500RL.pdf
+Chromium (Cr),7440-47-3,0.00058,Metal,CR,template13,RT0603BRC07500RL.pdf
+Silicon (Si),7440-21-3,0.00006,Metalloid,Si,template13,RT0603BRC07500RL.pdf
+Nickel (Ni),7440-02-0,0.00038,Metal,Ni,template13,RT0603BRC07500RL.pdf
+Chromium (Cr),7440-47-3,0.00009,Metal,Cr,template13,RT0603BRC07500RL.pdf
+Nickel (Ni),7440-02-0,0.06408,Metal,Ni,template13,RT0603BRC07500RL.pdf
+Tin (Sn),7440-31-5,0.06307,Metal,Sn,template13,RT0603BRC07500RL.pdf
+Epoxy Resin,25068-38-6,0.03045,Polymer,Epoxy resin,template13,RT0603BRC07500RL.pdf
+Epoxy Resin,25068-38-6,0.00168,Polymer,Epoxy resin,template13,RT0603BRC07500RL.pdf
+Aluminum Oxide (Al2O3),1344-28-1,1.85795,Metal Oxide,Al2O3,template13,RT0603DRE07117KL.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.05613,Metal Oxide,SiO2,template13,RT0603DRE07117KL.pdf
+Calcium Oxide (CaO),1305-78-8,0.01161,Metal Oxide,CaO,template13,RT0603DRE07117KL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.00968,Metal Oxide,MgO,template13,RT0603DRE07117KL.pdf
+Silver (Ag),7440-22-4,0.02105,Metal,Ag,template13,RT0603DRE07117KL.pdf
+Palladium (Pd),7440-05-3,0.00060,Metal,Pd,template13,RT0603DRE07117KL.pdf
+Glass frit (Contains Pb),65997-18-4,0.00010,Unknown,Glass frit (Contains Pb),template13,RT0603DRE07117KL.pdf
+Silver (Ag),7440-22-4,0.00814,Metal,Ag,template13,RT0603DRE07117KL.pdf
+Lead-Free Glass (Bi-Si-B),65997-17-3,0.00144,Glass,"Glass (Pb free) (contains Bismuth, Silicon & Boron)",template13,RT0603DRE07117KL.pdf
+Nickel (Ni),7440-02-0,0.00064,Metal,Ni,template13,RT0603DRE07117KL.pdf
+Chromium (Cr),7440-47-3,0.00058,Metal,CR,template13,RT0603DRE07117KL.pdf
+Silicon (Si),7440-21-3,0.00006,Metalloid,Si,template13,RT0603DRE07117KL.pdf
+Nickel (Ni),7440-02-0,0.00038,Metal,Ni,template13,RT0603DRE07117KL.pdf
+Chromium (Cr),7440-47-3,0.00009,Metal,Cr,template13,RT0603DRE07117KL.pdf
+Nickel (Ni),7440-02-0,0.06408,Metal,Ni,template13,RT0603DRE07117KL.pdf
+Tin (Sn),7440-31-5,0.06307,Metal,Sn,template13,RT0603DRE07117KL.pdf
+Epoxy Resin,25068-38-6,0.03045,Polymer,Epoxy resin,template13,RT0603DRE07117KL.pdf
+Epoxy Resin,25068-38-6,0.00168,Polymer,Epoxy resin,template13,RT0603DRE07117KL.pdf
+Aluminum Oxide (Al2O3),1344-28-1,1.85795,Metal Oxide,Al2O3,template13,RT0603DRE0713K3L.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.05613,Metal Oxide,SiO2,template13,RT0603DRE0713K3L.pdf
+Calcium Oxide (CaO),1305-78-8,0.01161,Metal Oxide,CaO,template13,RT0603DRE0713K3L.pdf
+Magnesium Oxide (MgO),1309-48-4,0.00968,Metal Oxide,MgO,template13,RT0603DRE0713K3L.pdf
+Silver (Ag),7440-22-4,0.02105,Metal,Ag,template13,RT0603DRE0713K3L.pdf
+Palladium (Pd),7440-05-3,0.00060,Metal,Pd,template13,RT0603DRE0713K3L.pdf
+Glass frit (Contains Pb),65997-18-4,0.00010,Unknown,Glass frit (Contains Pb),template13,RT0603DRE0713K3L.pdf
+Silver (Ag),7440-22-4,0.00814,Metal,Ag,template13,RT0603DRE0713K3L.pdf
+Lead-Free Glass (Bi-Si-B),65997-17-3,0.00144,Glass,"Glass (Pb free) (contains Bismuth, Silicon & Boron)",template13,RT0603DRE0713K3L.pdf
+Nickel (Ni),7440-02-0,0.00064,Metal,Ni,template13,RT0603DRE0713K3L.pdf
+Chromium (Cr),7440-47-3,0.00058,Metal,CR,template13,RT0603DRE0713K3L.pdf
+Silicon (Si),7440-21-3,0.00006,Metalloid,Si,template13,RT0603DRE0713K3L.pdf
+Nickel (Ni),7440-02-0,0.00038,Metal,Ni,template13,RT0603DRE0713K3L.pdf
+Chromium (Cr),7440-47-3,0.00009,Metal,Cr,template13,RT0603DRE0713K3L.pdf
+Nickel (Ni),7440-02-0,0.06408,Metal,Ni,template13,RT0603DRE0713K3L.pdf
+Tin (Sn),7440-31-5,0.06307,Metal,Sn,template13,RT0603DRE0713K3L.pdf
+Epoxy Resin,25068-38-6,0.03045,Polymer,Epoxy resin,template13,RT0603DRE0713K3L.pdf
+Epoxy Resin,25068-38-6,0.00168,Polymer,Epoxy resin,template13,RT0603DRE0713K3L.pdf
+Silicon (Si),7440-21-3,0.49,Metalloid,Silicon (Si),template4,SZMM3Z10VST1G.pdf
+Nickel (Ni),7440-02-0,0.3122,Metal,Nickel (Ni),template4,SZMM3Z10VST1G.pdf
+Iron (Fe),7439-89-6,0.4317,Metal,Iron (Fe),template4,SZMM3Z10VST1G.pdf
+Copper (Cu),7440-50-8,0.1161,Metal,Copper (Cu),template4,SZMM3Z10VST1G.pdf
+Boron zinc hydroxide oxide,138265-88-0,0.0906,Unknown,Boron zinc hydroxide oxide,template4,SZMM3Z10VST1G.pdf
+Zinc Monoxide (ZnO),1314-13-2,0.0151,Unknown,Zinc Monoxide (ZnO),template4,SZMM3Z10VST1G.pdf
+"2,4,6-triamino-s-triazincompd.withs-",37640-57-6,0.0906,Unknown,"2,4,6-triamino-s-triazincompd.withs-",template4,SZMM3Z10VST1G.pdf
+Silica Amorphous (SiO2),7631-86-9,2.416,Unknown,Silica Amorphous (SiO2),template4,SZMM3Z10VST1G.pdf
+Carbon Black (C),1333-86-4,0.0302,Unknown,Carbon Black (C),template4,SZMM3Z10VST1G.pdf
+Ortho-Cresol Novolac Resin,29690-82-2,0.2416,Unknown,Ortho-Cresol Novolac Resin,template4,SZMM3Z10VST1G.pdf
+Phenolic Resin (Novolac),9003-35-4,0.1359,Unknown,Phenolic Resin (Novolac),template4,SZMM3Z10VST1G.pdf
+Tin (Sn),7440-31-5,0.13,Metal,Tin (Sn),template4,SZMM3Z10VST1G.pdf
+Copper (Cu),7440-50-8,0.01,Metal,Copper (Cu),template4,SZMM3Z10VST1G.pdf
+Copper (Cu),7440-50-8,0.010399,Metal,Copper,template7,TMUX1219DCKR.xlsx
+Gold (Au),7440-57-5,0.000005,Metal,Gold,template7,TMUX1219DCKR.xlsx
+Palladium (Pd),7440-05-3,0.000256,Metal,Palladium,template7,TMUX1219DCKR.xlsx
+Phenolic Resin,9003-35-4,0.002206,Unknown,Phenolic Resin,template7,TMUX1219DCKR.xlsx
+Aluminum Oxide (Al2O3),1344-28-1,0.027533,Metal Oxide,Aluminum Oxide,template7,TMUX1219DCKR.xlsx
+Carbon Black,1333-86-4,0.000037,Filler,Carbon Black,template7,TMUX1219DCKR.xlsx
+Dicyandiamide,461-58-5,0.000184,Unknown,Dicyandiamide,template7,TMUX1219DCKR.xlsx
+Epoxy Resin,85954-11-6,0.003308,Polymer,Epoxy,template7,TMUX1219DCKR.xlsx
+Copper (Cu),7440-50-8,6.622887,Metal,Copper,template7,TMUX1219DCKR.xlsx
+Iron (Fe),7439-89-6,0.149204,Metal,Iron,template7,TMUX1219DCKR.xlsx
+Phosphorus (P),7723-14-0,0.001763,Non-Metal,Phosphorus,template7,TMUX1219DCKR.xlsx
+Lead (Pb),7439-92-1,0.000007,Metal,Lead,template7,TMUX1219DCKR.xlsx
+Zinc (Zn),7440-66-6,0.008138,Metal,Zinc,template7,TMUX1219DCKR.xlsx
+Tin (Sn),7440-31-5,0.163,Metal,Tin,template7,TMUX1219DCKR.xlsx
+Fused Silica (SiO2),60676-86-0,3.305448,Metal Oxide,Fused Silica,template7,TMUX1219DCKR.xlsx
+Carbon Black,1333-86-4,0.011269,Filler,Carbon Black,template7,TMUX1219DCKR.xlsx
+Chlorine (Cl),7782-50-5,0.000038,Halogen,Chlorine,template7,TMUX1219DCKR.xlsx
+Epoxy Resin,85954-11-6,0.439437,Polymer,Epoxy,template7,TMUX1219DCKR.xlsx
+Doped Silicon (Si),7440-21-3,0.104107,Metalloid,Doped Silicon,template7,TMUX1219DCKR.xlsx
+Gold (Au),7440-57-5,0.008024,Metal,Gold,template7,TPD4E004DRYR.xlsx
+Palladium (Pd),7440-05-3,0.000041,Metal,Palladium,template7,TPD4E004DRYR.xlsx
+Aluminum Nitride,24304-00-5,0.000144,Unknown,Aluminum Nitride,template7,TPD4E004DRYR.xlsx
+Titanium Dioxide,13463-67-7,0.000433,Unknown,Titanium Dioxide,template7,TPD4E004DRYR.xlsx
+Hydroxypropyl Methacrylate,27813-02-1,0.006203,Unknown,Hydroxypropyl Methacrylate,template7,TPD4E004DRYR.xlsx
+Tripropylene Glycol Diacrylate,42978-66-5,0.000433,Unknown,Tripropylene Glycol Diacrylate,template7,TPD4E004DRYR.xlsx
+Anhydride,85-44-9,0.00202,Unknown,Anhydride,template7,TPD4E004DRYR.xlsx
+Epoxy Resin,85954-11-6,0.005193,Polymer,Epoxy,template7,TPD4E004DRYR.xlsx
+Copper (Cu),7440-50-8,1.942577,Metal,Copper,template7,TPD4E004DRYR.xlsx
+Iron (Fe),7439-89-6,0.04544,Metal,Iron,template7,TPD4E004DRYR.xlsx
+Phosphorus (P),7723-14-0,0.001993,Non-Metal,Phosphorus,template7,TPD4E004DRYR.xlsx
+Zinc (Zn),7440-66-6,0.00299,Metal,Zinc,template7,TPD4E004DRYR.xlsx
+Nickel (Ni),7440-02-0,0.019975,Metal,Nickel,template7,TPD4E004DRYR.xlsx
+Gold (Au),7440-57-5,0.000164,Metal,Gold,template7,TPD4E004DRYR.xlsx
+Palladium (Pd),7440-05-3,0.000861,Metal,Palladium,template7,TPD4E004DRYR.xlsx
+Fused Silica (SiO2),60676-86-0,0.649084,Metal Oxide,Fused Silica,template7,TPD4E004DRYR.xlsx
+Silicon Dioxide (SiO2),7631-86-9,0.132466,Metal Oxide,Silica,template7,TPD4E004DRYR.xlsx
+Carbon Black,1333-86-4,0.004416,Filler,Carbon Black,template7,TPD4E004DRYR.xlsx
+Organic Phosphorus,1330-78-5,0.004416,Unknown,Organic Phosphorus,template7,TPD4E004DRYR.xlsx
+Silicone,218163-11-2,0.004416,Unknown,Silicone,template7,TPD4E004DRYR.xlsx
+Epoxy Resin,85954-11-6,0.088311,Polymer,Epoxy,template7,TPD4E004DRYR.xlsx
+Doped Silicon (Si),7440-21-3,0.113669,Metalloid,Doped Silicon,template7,TPD4E004DRYR.xlsx
+Gold (Au),7440-57-5,0.060708,Metal,Gold,template7,TPS73033DBVR.xlsx
+Silver (Ag),7440-22-4,0.000001,Metal,Silver,template7,TPS73033DBVR.xlsx
+Silver (Ag),7440-22-4,0.141249,Metal,Silver,template7,TPS73033DBVR.xlsx
+Epoxy Resin,85954-11-6,0.047083,Polymer,Epoxy,template7,TPS73033DBVR.xlsx
+Copper (Cu),7440-50-8,7.80776,Metal,Copper,template7,TPS73033DBVR.xlsx
+Iron (Fe),7439-89-6,0.1784,Metal,Iron,template7,TPS73033DBVR.xlsx
+Phosphorus (P),7723-14-0,0.0028,Non-Metal,Phosphorus,template7,TPS73033DBVR.xlsx
+Zinc (Zn),7440-66-6,0.01104,Metal,Zinc,template7,TPS73033DBVR.xlsx
+Nickel (Ni),7440-02-0,0.085608,Metal,Nickel,template7,TPS73033DBVR.xlsx
+Gold (Au),7440-57-5,0.000702,Metal,Gold,template7,TPS73033DBVR.xlsx
+Palladium (Pd),7440-05-3,0.00369,Metal,Palladium,template7,TPS73033DBVR.xlsx
+Fused Silica (SiO2),60676-86-0,9.752045,Metal Oxide,Fused Silica,template7,TPS73033DBVR.xlsx
+Carbon Black,1333-86-4,0.011209,Filler,Carbon Black,template7,TPS73033DBVR.xlsx
+Epoxy Resin,85954-11-6,1.445993,Polymer,Epoxy,template7,TPS73033DBVR.xlsx
+Doped Silicon (Si),7440-21-3,0.708979,Metalloid,Doped Silicon,template7,TPS73033DBVR.xlsx

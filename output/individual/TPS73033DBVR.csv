@@ -1,0 +1,16 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Gold (Au),7440-57-5,0.060708,Metal,Gold,template7,TPS73033DBVR.xlsx
+Silver (Ag),7440-22-4,0.000001,Metal,Silver,template7,TPS73033DBVR.xlsx
+Silver (Ag),7440-22-4,0.141249,Metal,Silver,template7,TPS73033DBVR.xlsx
+Epoxy Resin,85954-11-6,0.047083,Polymer,Epoxy,template7,TPS73033DBVR.xlsx
+Copper (Cu),7440-50-8,7.80776,Metal,Copper,template7,TPS73033DBVR.xlsx
+Iron (Fe),7439-89-6,0.1784,Metal,Iron,template7,TPS73033DBVR.xlsx
+Phosphorus (P),7723-14-0,0.0028,Non-Metal,Phosphorus,template7,TPS73033DBVR.xlsx
+Zinc (Zn),7440-66-6,0.01104,Metal,Zinc,template7,TPS73033DBVR.xlsx
+Nickel (Ni),7440-02-0,0.085608,Metal,Nickel,template7,TPS73033DBVR.xlsx
+Gold (Au),7440-57-5,0.000702,Metal,Gold,template7,TPS73033DBVR.xlsx
+Palladium (Pd),7440-05-3,0.00369,Metal,Palladium,template7,TPS73033DBVR.xlsx
+Fused Silica (SiO2),60676-86-0,9.752045,Metal Oxide,Fused Silica,template7,TPS73033DBVR.xlsx
+Carbon Black,1333-86-4,0.011209,Filler,Carbon Black,template7,TPS73033DBVR.xlsx
+Epoxy Resin,85954-11-6,1.445993,Polymer,Epoxy,template7,TPS73033DBVR.xlsx
+Doped Silicon (Si),7440-21-3,0.708979,Metalloid,Doped Silicon,template7,TPS73033DBVR.xlsx

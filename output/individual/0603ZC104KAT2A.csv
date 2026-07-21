@@ -1,0 +1,18 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Aluminum Oxide (Al2O3),1344-28-1,0.00245,Metal Oxide,ALUMINUM OXIDE,template6,0603ZC104KAT2A.pdf
+Barium Oxide (BaO),1304-28-5,2.8236,Metal Oxide,BARIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Calcium Oxide (CaO),1305-78-8,0.0076,Metal Oxide,CALCIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Tricobalt Tetraoxide (Co3O4),1308-06-1,0.0002,Metal Oxide,TRICOBALT TETRAOXIDE,template6,0603ZC104KAT2A.pdf
+Magnesium Oxide (MgO),1309-48-4,0.0045,Metal Oxide,MAGNESIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Manganese Dioxide (MnO2),1313-13-9,0.0025,Metal Oxide,MANGANESE DIOXIDE,template6,0603ZC104KAT2A.pdf
+Antimony Trioxide (Sb2O3),1309-64-4,0.00365,Metal Oxide,DIANTIMONY TRIOXIDE,template6,0603ZC104KAT2A.pdf
+Strontium Oxide (SrO),1314-11-0,0.0008,Metal Oxide,STRONTIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Anatase (TiO2),1317-70-0,1.4005,Metal Oxide,ANATASE,template6,0603ZC104KAT2A.pdf
+Yttrium Oxide (Y2O3),1314-36-9,0.0385,Metal Oxide,YTTRIUM OXIDE,template6,0603ZC104KAT2A.pdf
+Zinc Oxide (ZnO),1314-13-2,0.00765,Metal Oxide,ZINC OXIDE,template6,0603ZC104KAT2A.pdf
+Zirconium Dioxide (ZrO2),1314-23-4,0.002,Metal Oxide,ZIRCONIUM DIOXIDE,template6,0603ZC104KAT2A.pdf
+Sulphur Trioxide (SO3),7446-11-9,0.00075,Metal Oxide,SULPHUR TRIOXIDE,template6,0603ZC104KAT2A.pdf
+Nickel (Ni),7440-02-0,0.2044,Metal,NICKEL,template6,0603ZC104KAT2A.pdf
+Nickel (Ni),7440-02-0,0.114,Metal,NICKEL,template6,0603ZC104KAT2A.pdf
+Tin (Sn),7440-31-5,0.12835,Metal,TIN,template6,0603ZC104KAT2A.pdf
+Copper Oxide (CuO),1317-38-0,0.35175,Metal Oxide,COPPER OXIDE,template6,0603ZC104KAT2A.pdf

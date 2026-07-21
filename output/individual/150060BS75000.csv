@@ -1,0 +1,16 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Aluminum oxide(Al2O3),,4.7,Unknown,Aluminum oxide(Al2O3),template2,150060BS75000.pdf
+Gallium nitride(GaN),,3.5,Unknown,Gallium nitride(GaN),template2,150060BS75000.pdf
+Indium nitride(InN),,1.8,Unknown,Indium nitride(InN),template2,150060BS75000.pdf
+Gold(Au),,10.0,Unknown,Gold(Au),template2,150060BS75000.pdf
+Epoxy Resin (Bisphenol A DGEBA),,7.5,Polymer,Bisphenol A diglycidyl ether resin,template2,150060BS75000.pdf
+Additives (Trade Secret),,2.5,Additive,Trade secret,template2,150060BS75000.pdf
+Bisphenol A-Bisphenol A diglycidyl ether polymer,,9.7,Unknown,Bisphenol A-Bisphenol A diglycidyl ether polymer,template2,150060BS75000.pdf
+Additives (Trade Secret),,0.3,Additive,Trade secret,template2,150060BS75000.pdf
+Epoxy Resin (Bisphenol A DGEBA),,2.8,Polymer,Bisphenol A diglycidyl ether resin,template2,150060BS75000.pdf
+Epoxy Resin (o-Cresol Novolac),,2.047,Polymer,"o-Cresol, formaldehyde, epichlorohydrin polymer",template2,150060BS75000.pdf
+Glass Fiber,,2.0,Composite,Glass fiber,template2,150060BS75000.pdf
+Epoxy Resin (Phenol-Formaldehyde),,3.153,Polymer,"Formaldehyde, polymer with (chloromethyl)oxirane and phenol",template2,150060BS75000.pdf
+Nickel(Ni),,4.4,Unknown,Nickel(Ni),template2,150060BS75000.pdf
+Copper(Cu),,5.5,Unknown,Copper(Cu),template2,150060BS75000.pdf
+Gold(Au),,0.1,Unknown,Gold(Au),template2,150060BS75000.pdf

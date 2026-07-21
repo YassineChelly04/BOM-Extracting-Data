@@ -1,0 +1,19 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Gold (Au),7440-57-5,0.066925,Metal,Gold,template7,INA240A2PWR.xlsx
+Silver (Ag),7440-22-4,0.000001,Metal,Silver,template7,INA240A2PWR.xlsx
+Silver (Ag),7440-22-4,0.62268,Metal,Silver,template7,INA240A2PWR.xlsx
+Epoxy Resin,85954-11-6,0.15567,Polymer,Epoxy,template7,INA240A2PWR.xlsx
+Copper (Cu),7440-50-8,12.6633,Metal,Copper,template7,INA240A2PWR.xlsx
+Iron (Fe),7439-89-6,0.312,Metal,Iron,template7,INA240A2PWR.xlsx
+Phosphorus (P),7723-14-0,0.0039,Non-Metal,Phosphorus,template7,INA240A2PWR.xlsx
+Lead (Pb),7439-92-1,0.0039,Metal,Lead,template7,INA240A2PWR.xlsx
+Tin (Sn),7440-31-5,0.0039,Metal,Tin,template7,INA240A2PWR.xlsx
+Zinc (Zn),7440-66-6,0.013,Metal,Zinc,template7,INA240A2PWR.xlsx
+Nickel (Ni),7440-02-0,0.247312,Metal,Nickel,template7,INA240A2PWR.xlsx
+Gold (Au),7440-57-5,0.002028,Metal,Gold,template7,INA240A2PWR.xlsx
+Palladium (Pd),7440-05-3,0.01066,Metal,Palladium,template7,INA240A2PWR.xlsx
+Fused Silica (SiO2),60676-86-0,21.344571,Metal Oxide,Fused Silica,template7,INA240A2PWR.xlsx
+Carbon Black,1333-86-4,0.074458,Filler,Carbon Black,template7,INA240A2PWR.xlsx
+Organic Phosphorus,1330-78-5,0.136506,Unknown,Organic Phosphorus,template7,INA240A2PWR.xlsx
+Epoxy Resin,85954-11-6,3.263734,Polymer,Epoxy,template7,INA240A2PWR.xlsx
+Doped Silicon (Si),7440-21-3,2.54743,Metalloid,Doped Silicon,template7,INA240A2PWR.xlsx

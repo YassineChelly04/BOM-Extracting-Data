@@ -1,0 +1,20 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Copper (Cu),7440-50-8,0.010399,Metal,Copper,template7,TMUX1219DCKR.xlsx
+Gold (Au),7440-57-5,0.000005,Metal,Gold,template7,TMUX1219DCKR.xlsx
+Palladium (Pd),7440-05-3,0.000256,Metal,Palladium,template7,TMUX1219DCKR.xlsx
+Phenolic Resin,9003-35-4,0.002206,Unknown,Phenolic Resin,template7,TMUX1219DCKR.xlsx
+Aluminum Oxide (Al2O3),1344-28-1,0.027533,Metal Oxide,Aluminum Oxide,template7,TMUX1219DCKR.xlsx
+Carbon Black,1333-86-4,0.000037,Filler,Carbon Black,template7,TMUX1219DCKR.xlsx
+Dicyandiamide,461-58-5,0.000184,Unknown,Dicyandiamide,template7,TMUX1219DCKR.xlsx
+Epoxy Resin,85954-11-6,0.003308,Polymer,Epoxy,template7,TMUX1219DCKR.xlsx
+Copper (Cu),7440-50-8,6.622887,Metal,Copper,template7,TMUX1219DCKR.xlsx
+Iron (Fe),7439-89-6,0.149204,Metal,Iron,template7,TMUX1219DCKR.xlsx
+Phosphorus (P),7723-14-0,0.001763,Non-Metal,Phosphorus,template7,TMUX1219DCKR.xlsx
+Lead (Pb),7439-92-1,0.000007,Metal,Lead,template7,TMUX1219DCKR.xlsx
+Zinc (Zn),7440-66-6,0.008138,Metal,Zinc,template7,TMUX1219DCKR.xlsx
+Tin (Sn),7440-31-5,0.163,Metal,Tin,template7,TMUX1219DCKR.xlsx
+Fused Silica (SiO2),60676-86-0,3.305448,Metal Oxide,Fused Silica,template7,TMUX1219DCKR.xlsx
+Carbon Black,1333-86-4,0.011269,Filler,Carbon Black,template7,TMUX1219DCKR.xlsx
+Chlorine (Cl),7782-50-5,0.000038,Halogen,Chlorine,template7,TMUX1219DCKR.xlsx
+Epoxy Resin,85954-11-6,0.439437,Polymer,Epoxy,template7,TMUX1219DCKR.xlsx
+Doped Silicon (Si),7440-21-3,0.104107,Metalloid,Doped Silicon,template7,TMUX1219DCKR.xlsx

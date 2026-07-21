@@ -1,0 +1,18 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Carbon Black,1333-86-4,0.139,Filler,Carbon black,template3,1051640001.pdf
+Liquid Crystal Polymer (LCP),,18.836,Polymer,LCP,template3,1051640001.pdf
+Additives (Trade Secret),system,0.416,Additive,"Further Additives, not to declare",template3,1051640001.pdf
+Glass Fiber,,8.31,Composite,GF-Fibre,template3,1051640001.pdf
+Copper (Cu),7440-50-8,7.95,Metal,Copper,template3,1051640001.pdf
+Zinc (metal),7440-66-6,4.05,Unknown,Zinc (metal),template3,1051640001.pdf
+Cobalt (Co),7440-48-4,0.00002,Metal,Cobalt,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.00002,Metal,Nickel,template3,1051640001.pdf
+Gold (Au),7440-57-5,0.006,Metal,Gold,template3,1051640001.pdf
+Palladium (Pd),7440-05-3,0.008,Metal,Palladium,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.002,Metal,Nickel,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,0.583,Metal,Nickel,template3,1051640001.pdf
+Chromium (Cr),7440-47-3,35.131,Metal,Chromium,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,17.103,Metal,Nickel,template3,1051640001.pdf
+Iron (Fe),7439-89-6,132.666,Metal,Iron,template3,1051640001.pdf
+Nickel (Ni),7440-02-0,2.8,Metal,Nickel,template3,1051640001.pdf
+Tin (Sn),7440-31-5,5.6,Metal,Tin,template3,1051640001.pdf

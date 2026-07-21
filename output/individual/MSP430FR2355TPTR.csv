@@ -1,0 +1,19 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Copper (Cu),7440-50-8,0.1797,Metal,Copper,template7,MSP430FR2355TPTR.xlsx
+Gold (Au),7440-57-5,0.001092,Metal,Gold,template7,MSP430FR2355TPTR.xlsx
+Palladium (Pd),7440-05-3,0.005312,Metal,Palladium,template7,MSP430FR2355TPTR.xlsx
+Silver (Ag),7440-22-4,0.000003,Metal,Silver,template7,MSP430FR2355TPTR.xlsx
+Silver (Ag),7440-22-4,0.793691,Metal,Silver,template7,MSP430FR2355TPTR.xlsx
+Epoxy Resin,85954-11-6,0.264564,Polymer,Epoxy,template7,MSP430FR2355TPTR.xlsx
+Copper (Cu),7440-50-8,83.328604,Metal,Copper,template7,MSP430FR2355TPTR.xlsx
+Iron (Fe),7439-89-6,2.089496,Metal,Iron,template7,MSP430FR2355TPTR.xlsx
+Phosphorus (P),7723-14-0,0.07062,Non-Metal,Phosphorus,template7,MSP430FR2355TPTR.xlsx
+Zinc (Zn),7440-66-6,0.11128,Metal,Zinc,template7,MSP430FR2355TPTR.xlsx
+Nickel (Ni),7440-02-0,0.283458,Metal,Nickel,template7,MSP430FR2355TPTR.xlsx
+Gold (Au),7440-57-5,0.002324,Metal,Gold,template7,MSP430FR2355TPTR.xlsx
+Palladium (Pd),7440-05-3,0.012218,Metal,Palladium,template7,MSP430FR2355TPTR.xlsx
+Fused Silica (SiO2),60676-86-0,106.168025,Metal Oxide,Fused Silica,template7,MSP430FR2355TPTR.xlsx
+Carbon Black,1333-86-4,0.361936,Filler,Carbon Black,template7,MSP430FR2355TPTR.xlsx
+Chlorine (Cl),7782-50-5,0.001206,Halogen,Chlorine,template7,MSP430FR2355TPTR.xlsx
+Epoxy Resin,85954-11-6,14.114315,Polymer,Epoxy,template7,MSP430FR2355TPTR.xlsx
+Doped Silicon (Si),7440-21-3,4.059463,Metalloid,Doped Silicon,template7,MSP430FR2355TPTR.xlsx

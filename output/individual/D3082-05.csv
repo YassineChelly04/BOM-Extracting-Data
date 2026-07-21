@@ -1,0 +1,7 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Copper (Cu),7440-50-8,110,Metal,Copper,template10,D3082-05.pdf
+Zinc (Zn),7440-66-6,65.3,Metal,Zinc,template10,D3082-05.pdf
+Lead (Pb),7439-92-1,3.58,Metal,Lead,template10,D3082-05.pdf
+Nickel (Ni),7440-02-0,1.6,Metal,Nickel,template10,D3082-05.pdf
+Gold (Au),7440-57-5,0.173,Metal,Gold,template10,D3082-05.pdf
+Tin (Sn),7440-31-5,2.62,Metal,Tin,template10,D3082-05.pdf

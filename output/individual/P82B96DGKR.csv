@@ -1,0 +1,17 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Gold (Au),7440-57-5,0.078005,Metal,Gold,template7,P82B96DGKR.xlsx
+Silver (Ag),7440-22-4,0.220359,Metal,Silver,template7,P82B96DGKR.xlsx
+Epoxy Resin,85954-11-6,0.081502,Polymer,Epoxy,template7,P82B96DGKR.xlsx
+Copper (Cu),7440-50-8,9.65634,Metal,Copper,template7,P82B96DGKR.xlsx
+Iron (Fe),7439-89-6,0.0204,Metal,Iron,template7,P82B96DGKR.xlsx
+Nickel (Ni),7440-02-0,0.3264,Metal,Nickel,template7,P82B96DGKR.xlsx
+Silicon (Si),7440-21-3,0.08976,Metalloid,Silicon,template7,P82B96DGKR.xlsx
+Lead (Pb),7439-92-1,0.0051,Metal,Lead,template7,P82B96DGKR.xlsx
+Zinc (Zn),7440-66-6,0.102,Metal,Zinc,template7,P82B96DGKR.xlsx
+Nickel (Ni),7440-02-0,0.194045,Metal,Nickel,template7,P82B96DGKR.xlsx
+Gold (Au),7440-57-5,0.001591,Metal,Gold,template7,P82B96DGKR.xlsx
+Palladium (Pd),7440-05-3,0.008364,Metal,Palladium,template7,P82B96DGKR.xlsx
+Fused Silica (SiO2),60676-86-0,12.608714,Metal Oxide,Fused Silica,template7,P82B96DGKR.xlsx
+Carbon Black,1333-86-4,0.044501,Filler,Carbon Black,template7,P82B96DGKR.xlsx
+Epoxy Resin,85954-11-6,2.180566,Polymer,Epoxy,template7,P82B96DGKR.xlsx
+Doped Silicon (Si),7440-21-3,1.136361,Metalloid,Doped Silicon,template7,P82B96DGKR.xlsx

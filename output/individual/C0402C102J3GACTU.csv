@@ -1,0 +1,7 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Calcium Zirconate (CaZrO3),CaZrO3,0.89,Ceramic,Calcium Zirconate,template1,C0402C102J3GACTU.pdf
+Additives (Undisclosed),,0.16,Additive,Miscellaneous,template1,C0402C102J3GACTU.pdf
+Electrode Paste (Ni),Ni,0.06,Paste,Electrode paste,template1,C0402C102J3GACTU.pdf
+Base Metal (Cu),Cu,0.01,Metal,Base Metal,template1,C0402C102J3GACTU.pdf
+Under Layer (Ni),Ni,0.03,Plating,Under layer,template1,C0402C102J3GACTU.pdf
+Finish Plating (Sn),Sn,0.05,Plating,Finish plating,template1,C0402C102J3GACTU.pdf

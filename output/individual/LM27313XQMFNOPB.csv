@@ -1,0 +1,15 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Gold (Au),7440-57-5,0.064148,Metal,Gold,template7,LM27313XQMFNOPB.xlsx
+Silver (Ag),7440-22-4,0.180193,Metal,Silver,template7,LM27313XQMFNOPB.xlsx
+Epoxy Resin,85954-11-6,0.060064,Polymer,Epoxy,template7,LM27313XQMFNOPB.xlsx
+Copper (Cu),7440-50-8,5.436408,Metal,Copper,template7,LM27313XQMFNOPB.xlsx
+Iron (Fe),7439-89-6,0.134065,Metal,Iron,template7,LM27313XQMFNOPB.xlsx
+Phosphorus (P),7723-14-0,0.00169,Non-Metal,Phosphorus,template7,LM27313XQMFNOPB.xlsx
+Silver (Ag),7440-22-4,0.054077,Metal,Silver,template7,LM27313XQMFNOPB.xlsx
+Zinc (Zn),7440-66-6,0.00676,Metal,Zinc,template7,LM27313XQMFNOPB.xlsx
+Tin (Sn),7440-31-5,0.7,Metal,Tin,template7,LM27313XQMFNOPB.xlsx
+Silicon Dioxide (SiO2),7631-86-9,9.570072,Metal Oxide,Silica,template7,LM27313XQMFNOPB.xlsx
+Metal Hydroxide,Trade Secret,0.323678,Unknown,Metal Hydroxide,template7,LM27313XQMFNOPB.xlsx
+Carbon Black,1333-86-4,0.032368,Filler,Carbon Black,template7,LM27313XQMFNOPB.xlsx
+Epoxy Resin,85954-11-6,0.863141,Polymer,Epoxy,template7,LM27313XQMFNOPB.xlsx
+Doped Silicon (Si),7440-21-3,0.812161,Metalloid,Doped Silicon,template7,LM27313XQMFNOPB.xlsx

@@ -4,127 +4,25 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "material-extractor"
-version = "1.0.0"
-description = "Production-ready material declaration extraction and normalization system"
+version = "2.0.0"
+description = "Extract and normalize material composition from supplier PDFs/XLSXs"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [
-    {name = "Material Extractor Team", email = "team@example.com"}
-]
-keywords = ["material-declaration", "bom", "extraction", "normalization", "pcb", "electronics"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Manufacturing",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Scientific/Engineering :: Information Analysis",
-]
 dependencies = [
     "pdfplumber>=0.11.0",
-    "pandas>=2.0.0",
     "openpyxl>=3.1.0",
-    "pydantic>=2.5.0",
-    "pydantic-settings>=2.1.0",
     "pyyaml>=6.0",
-    "rich>=13.0.0",
-    "typer>=0.9.0",
-    "rapidfuzz>=3.5.0",
-    "openpyxl>=3.1.0",
-    "python-magic>=0.4.27",
-    "loguru>=0.7.0",
-    "tenacity>=8.2.0",
 ]
 
 [project.optional-dependencies]
-dev = [
-    "pytest>=7.4.0",
-    "pytest-cov>=4.1.0",
-    "pytest-mock>=3.12.0",
-    "ruff>=0.1.0",
-    "mypy>=1.7.0",
-    "pre-commit>=3.5.0",
-    "black>=23.0.0",
-    "isort>=5.12.0",
-]
-pdf = ["pdfplumber>=0.11.0", "pdfminer.six>=20231228"]
-excel = ["openpyxl>=3.1.0", "xlrd>=2.0.1"]
-dev-tools = ["ipython>=8.0.0", "ipdb>=0.13.0"]
-
-[project.scripts]
-material-extractor = "material_extractor.cli.main:app"
-material-extract = "material_extractor.cli.commands.extract:extract_cmd"
-material-normalize = "material_extractor.cli.commands.normalize:normalize_cmd"
-material-validate = "material_extractor.cli.commands.validate:validate_cmd"
-material-list-templates = "material_extractor.cli.commands.list_templates:list_templates_cmd"
+# Only needed for template4 (scanned IPC-1752 form via OCR).
+ocr = ["paddleocr", "pymupdf", "numpy"]
+dev = ["pytest>=7.4.0"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
 include = ["material_extractor*"]
-
-[tool.setuptools.package-dir]
-"" = "src"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-addopts = "-v --strict-markers --tb=short"
-markers = [
-    "unit: Unit tests",
-    "integration: Integration tests",
-    "slow: Slow tests",
-    "pdf: Tests requiring PDF files",
-    "excel: Tests requiring Excel files",
-    "functional: Real end-to-end tests with actual documents",
-]
-
-[tool.ruff]
-target-version = "py311"
-line-length = 100
-select = [
-    "E", "F", "I", "W", "UP", "B", "C4", "SIM", "T20", "ARG", "PTH",
-    "ERA", "PD", "PL", "TRY", "NPY", "TCH", "PIE", "RET", "FLY",
-]
-ignore = ["E501", "B008", "C901", "T201", "T203", "ARG001", "ARG002"]
-extend-select = ["RUF012"]
-per-file-ignores = { "tests/*" = ["S101", "S106", "T201"], "scripts/*" = ["T201", "T203"] }
-
-[tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
-skip-magic-trailing-comma = true
-
-[tool.mypy]
-python_version = "3.11"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
-disallow_incomplete_defs = true
-check_untyped_defs = true
-no_implicit_optional = true
-strict_optional = true
-warn_redundant_casts = true
-warn_unused_ignores = true
-namespace_packages = true
-explicit_package_bases = true
-
-[[tool.mypy.overrides]]
-module = "tests.*"
-disallow_untyped_defs = false
-disallow_incomplete_defs = false
-
-[tool.coverage.run]
-source = ["src/material_extractor"]
-omit = ["tests/*", "scripts/*"]
-
-[tool.coverage.report]
-exclude_lines = [
-    "pragma: no cover",
-    "def __repr__",
-    "raise AssertionError",
-    "raise NotImplementedError",
-    "if __name__ == .__main__.:",
-]
