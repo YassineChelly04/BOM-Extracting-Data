@@ -1,0 +1,33 @@
+metadata:
+  template_id: vishay_mlcc
+  name: Vishay MLCC Material Declaration
+  version: 1.0.0
+  description: Vishay MLCC with material/substance/weight/unit columns
+  author: Material Extractor Team
+  source_type: pdf
+  page_indices:
+  - 0
+  detection_method: keyword_match
+  detection_keywords:
+  - Vishay
+  - Material Declaration
+  header_keywords:
+  - Material
+  - Substance
+  - Weight
+  - Unit
+  validation_rules:
+    min_rows: 2
+    min_cols: 4
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: pdf_table
+  extractor_class: VishayTemplateExtractor
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true

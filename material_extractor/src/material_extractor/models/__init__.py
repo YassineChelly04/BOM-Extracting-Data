@@ -1,7 +1,7 @@
 """Core data models for material extraction."""
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from decimal import Decimal
 from enum import Enum
 from pathlib import Path
@@ -103,8 +103,8 @@ class TemplateMetadata(BaseModel):
     version: str = "1.0.0"
     description: str = ""
     author: str = ""
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     source_type: SourceType = SourceType.PDF
     page_indices: list[int] | None = None
     detection_method: DetectionMethod = DetectionMethod.TEXT_PATTERN
@@ -143,7 +143,7 @@ class MaterialRecord(BaseModel):
     raw_substance: str = Field(default="")
     raw_weight: str = Field(default="")
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
-    extracted_at: datetime = Field(default_factory=datetime.utcnow)
+    extracted_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     normalization_method: NormalizationMethod | None = None
     matched_alias: str = Field(default="")
     
@@ -153,8 +153,18 @@ class MaterialRecord(BaseModel):
         if isinstance(v, (int, float, Decimal)):
             return Decimal(str(v))
         if isinstance(v, str):
-            cleaned = v.lower().replace("mg", "").replace("g", "").replace("kg", "").strip()
+            cleaned = v.lower().strip()
+            if not cleaned:
+                return Decimal("0")
             try:
+                if cleaned.endswith("kg"):
+                    return Decimal(cleaned[:-2].strip()) * 1000000
+                if cleaned.endswith("mg"):
+                    return Decimal(cleaned[:-2].strip())
+                if cleaned.endswith("ug"):
+                    return Decimal(cleaned[:-2].strip()) / 1000
+                if cleaned.endswith("g"):
+                    return Decimal(cleaned[:-1].strip()) * 1000
                 return Decimal(cleaned)
             except Exception:
                 return Decimal("0")
@@ -206,6 +216,7 @@ class ExtractionResult(BaseModel):
     file_type: SourceType = SourceType.UNKNOWN
     pages_processed: int = 0
     tables_found: int = 0
+    tables_processed: int = 0
     extraction_time_ms: float = 0.0
     errors: list[str] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
@@ -220,30 +231,11 @@ class ExtractionResult(BaseModel):
         return sum(r.weight_mg for r in self.records)
 
 
-class NormalizationRule(BaseModel):
-    """Normalization rule for material names."""
-    pattern: str
-    replacement: str
-    category: MaterialCategory | None = None
-    priority: int = Field(default=0, ge=0)
-    case_sensitive: bool = False
-    regex: bool = False
-    description: str = ""
-
-
-class NormalizationConfig(BaseModel):
-    """Normalization configuration."""
-    rules: list[NormalizationRule] = Field(default_factory=list)
-    categories: dict[str, MaterialCategory] = Field(default_factory=dict)
-    default_category: MaterialCategory = MaterialCategory.UNKNOWN
-    fuzzy_threshold: float = Field(default=0.85, ge=0.0, le=1.0)
-
-
 class TemplateRegistry(BaseModel):
     """Registry of all templates."""
     templates: dict[str, TemplateDefinition] = Field(default_factory=dict)
     version: str = "1.0.0"
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     
     def get(self, template_id: str) -> TemplateDefinition | None:
         return self.templates.get(template_id)
@@ -256,12 +248,12 @@ class TemplateRegistry(BaseModel):
     
     def register(self, template: TemplateDefinition) -> None:
         self.templates[template.metadata.template_id] = template
-        self.updated_at = datetime.utcnow()
+        self.updated_at = datetime.now(timezone.utc)
     
     def unregister(self, template_id: str) -> bool:
         if template_id in self.templates:
             del self.templates[template_id]
-            self.updated_at = datetime.utcnow()
+            self.updated_at = datetime.now(timezone.utc)
             return True
         return False
     

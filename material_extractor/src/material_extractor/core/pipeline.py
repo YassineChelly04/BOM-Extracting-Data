@@ -192,11 +192,7 @@ def run_pipeline(input_path: Path, template_dir: Path | None = None,
     if output_dir:
         settings.output_dir = output_dir
     
-    template_manager = TemplateManager()
-    if template_dir:
-        template_manager.load_from_yaml(template_dir)
-    else:
-        template_manager.load_registry()
+    template_manager = TemplateManager(templates_dir=template_dir)
     
     pipeline = ExtractionPipeline(template_manager=template_manager)
     

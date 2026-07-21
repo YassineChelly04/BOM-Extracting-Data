@@ -96,6 +96,7 @@ Copper (Cu):
   - copper
   - cu
   - copper (cu)
+  cas_number: 7440-50-8
   category: Metal
 Copper Oxide (CuO):
   aliases:
@@ -180,6 +181,7 @@ Gold (Au):
   - gold
   - au
   - gold (au)
+  cas_number: 7440-57-5
   category: Metal
 Indium (In):
   aliases:
@@ -201,6 +203,7 @@ Lead (Pb):
   - lead
   - pb
   - lead (pb)
+  cas_number: 7439-92-1
   category: Metal
 Lead-Containing Glass Frit:
   aliases:
@@ -236,11 +239,13 @@ Nickel (Ni):
   - nickel
   - ni
   - nickel (ni)
+  cas_number: 7440-02-0
   category: Metal
 Palladium (Pd):
   aliases:
   - palladium
   - pd
+  cas_number: 7440-05-3
   category: Metal
 Phosphorus (P):
   aliases:
@@ -285,6 +290,7 @@ Silver (Ag):
   - silver
   - ag
   - silver (ag)
+  cas_number: 7440-22-4
   category: Metal
 Solvent (Aromatic Naphtha):
   aliases:
@@ -306,6 +312,7 @@ Tin (Sn):
   - tin
   - sn
   - tin (sn)
+  cas_number: 7440-31-5
   category: Metal
 Tricobalt Tetraoxide (Co3O4):
   aliases:
@@ -328,6 +335,7 @@ Zinc (Zn):
   - zinc
   - zn
   - zinc (zn)
+  cas_number: 7440-66-6
   category: Metal
 Zinc Oxide (ZnO):
   aliases:

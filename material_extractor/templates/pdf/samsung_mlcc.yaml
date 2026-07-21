@@ -1,0 +1,36 @@
+metadata:
+  template_id: samsung_mlcc
+  name: Samsung MLCC Excel Format
+  version: 1.0.0
+  description: Samsung MLCC material declaration in Excel
+  author: Material Extractor Team
+  source_type: excel
+  page_indices:
+  - 0
+  detection_method: keyword_match
+  detection_keywords:
+  - Samsung
+  - MLCC
+  - Material
+  header_keywords:
+  - Material
+  - Substance
+  - Weight
+  validation_rules:
+    min_rows: 2
+    min_cols: 3
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: excel
+  sheet_keywords:
+  - Material
+  - Declaration
+  - Composition
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true

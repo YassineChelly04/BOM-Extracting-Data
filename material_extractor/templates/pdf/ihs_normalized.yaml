@@ -1,0 +1,28 @@
+metadata:
+  template_id: "ihs_normalized"
+  name: "IHS Normalized Format Material Declaration"
+  version: "1.0.0"
+  description: "IHS normalized format with Sub Part | Substance | CAS | Weight"
+  author: "Material Extractor Team"
+  source_type: "pdf"
+  page_indices: [0]
+  detection_method: "text_pattern"
+  detection_keywords:
+    - "Sub Part"
+    - "Sub Part Details"
+    - "Sub Part Substance"
+  validation_rules:
+    min_rows: 2
+    min_cols: 5
+  priority: 10
+  enabled: true
+
+extraction:
+  extractor_type: "pdf_table"
+  extractor_class: "IHSFormatExtractor"
+
+normalization: {}
+
+output:
+  fields: ["material", "substance", "weight_mg"]
+  include_raw: true

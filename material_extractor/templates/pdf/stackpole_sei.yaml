@@ -1,0 +1,34 @@
+metadata:
+  template_id: stackpole_sei
+  name: Stackpole SEI Material Declaration
+  version: 1.0.0
+  description: Stackpole SEI material declaration with multi-value newline-separated cells
+  author: Material Extractor Team
+  source_type: pdf
+  page_indices:
+  - 0
+  detection_method: text_pattern
+  detection_keywords:
+  - Material Declaration Data Sheet
+  - BOM Item
+  - Material PPM
+  header_keywords:
+  - BOM Item
+  - Material
+  - CAS
+  - Weight
+  validation_rules:
+    min_rows: 2
+    min_cols: 4
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: pdf_table
+  extractor_class: StackpoleTemplateExtractor
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true

@@ -9,7 +9,6 @@ import json
 from material_extractor.core.pipeline import ExtractionPipeline
 from material_extractor.templates.registry import TemplateManager
 from material_extractor.normalization import get_normalizer
-from material_extractor.config import get_settings
 from material_extractor.models import SourceType
 
 app = typer.Typer(name="extract", help="Extract materials from PDF/Excel files")
@@ -32,9 +31,9 @@ def extract_cmd(
     console = Console()
     
     # Initialize
-    template_manager = TemplateManager()
-    template_manager.load_registry()
-    
+    tmpl_dir = next((p for p in (Path("templates"), Path("material_extractor/templates")) if p.exists()), Path("templates"))
+    template_manager = TemplateManager(templates_dir=tmpl_dir)
+
     normalizer = get_normalizer()
     normalizer.load()
     

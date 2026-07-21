@@ -1,7 +1,7 @@
 """Unit tests for detectors."""
 import pytest
 from pathlib import Path
-from material_extractor.core.detectors import (
+from material_extractor.core.detector import (
     TextPatternDetector, HeaderMatchDetector, create_detector
 )
 from material_extractor.models import (

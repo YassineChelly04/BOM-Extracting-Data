@@ -78,6 +78,7 @@ markers = [
     "slow: Slow tests",
     "pdf: Tests requiring PDF files",
     "excel: Tests requiring Excel files",
+    "functional: Real end-to-end tests with actual documents",
 ]
 
 [tool.ruff]

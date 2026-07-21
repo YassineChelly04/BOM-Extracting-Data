@@ -10,66 +10,62 @@ from material_extractor.models import (
     MaterialRecord, MaterialCategory, NormalizationMethod, NormalizationResult,
     NormalizationConfig, NormalizationRule
 )
-from material_extractor.config import get_settings
 
 
 class ScalableNormalizer:
     """Production-ready normalizer with external data files."""
-    
+
+    NORM_FILE = Path(__file__).parent.parent.parent.parent / "normalization" / "materials.yaml"
+
     def __init__(self, config: NormalizationConfig | None = None, data_dir: Path | None = None):
-        self.settings = get_settings()
-        self.data_dir = data_dir or self.settings.data_dir / "normalization"
+        self.data_file = data_dir / "materials.yaml" if data_dir else self.NORM_FILE
+        self._data_dir = data_dir
         self.config = config or NormalizationConfig()
         self._material_map: dict[str, tuple[str, MaterialCategory]] = {}
         self._substance_map: dict[str, str] = {}
         self._alias_index: dict[str, str] = {}
         self._built = False
-    
+
+    @property
+    def data_dir(self) -> Path:
+        """Backward-compatible access to data directory."""
+        if self._data_dir:
+            return self._data_dir
+        return self.data_file.parent
+
     def load(self) -> None:
-        """Load normalization data from YAML files."""
+        """Load normalization data from single YAML file."""
         self._material_map.clear()
         self._substance_map.clear()
         self._alias_index.clear()
-        
-        # Load materials
-        materials_file = self.data_dir / "materials.yaml"
-        if materials_file.exists():
-            with open(materials_file) as f:
-                data = yaml.safe_load(f) or {}
-            for normalized, info in data.items():
-                category = MaterialCategory(info.get("category", "Unknown"))
-                aliases = info.get("aliases", [])
+
+        if not self.data_file.exists():
+            self._built = True
+            return
+
+        with open(self.data_file) as f:
+            data = yaml.safe_load(f) or {}
+
+        for normalized, info in data.items():
+            aliases = info.get("aliases", [])
+            category_str = info.get("category")
+
+            if category_str:
+                try:
+                    category = MaterialCategory(category_str)
+                except ValueError:
+                    category = MaterialCategory.UNKNOWN
                 self._material_map[normalized.lower()] = (normalized, category)
+                self._alias_index[normalized.lower()] = normalized
                 for alias in aliases:
                     self._alias_index[alias.lower()] = normalized
-                self._alias_index[normalized.lower()] = normalized
-        
-        # Load substances
-        substances_file = self.data_dir / "substances.yaml"
-        if substances_file.exists():
-            with open(substances_file) as f:
-                data = yaml.safe_load(f) or {}
-            for normalized, info in data.items():
-                aliases = info.get("aliases", [])
+
+            if aliases:
                 self._substance_map[normalized.lower()] = normalized
                 for alias in aliases:
                     self._substance_map[alias.lower()] = normalized
                     self._alias_index[alias.lower()] = normalized
-        
-        # Load categories
-        categories_file = self.data_dir / "categories.yaml"
-        if categories_file.exists():
-            with open(categories_file) as f:
-                data = yaml.safe_load(f) or {}
-            for cat_name, materials in data.items():
-                try:
-                    category = MaterialCategory(cat_name)
-                    for mat in materials:
-                        self._material_map[mat.lower()] = (mat, category)
-                        self._alias_index[mat.lower()] = mat
-                except ValueError:
-                    pass
-        
+
         self._built = True
     
     def normalize(self, material_name: str, substance: str = "") -> NormalizationResult:
@@ -174,10 +170,9 @@ class ScalableNormalizer:
     
     def save_material(self, normalized: str, aliases: list[str], category: MaterialCategory) -> None:
         """Persist material to YAML."""
-        materials_file = self.data_dir / "materials.yaml"
         data = {}
-        if materials_file.exists():
-            with open(materials_file) as f:
+        if self.data_file.exists():
+            with open(self.data_file) as f:
                 data = yaml.safe_load(f) or {}
         
         data[normalized] = {
@@ -185,8 +180,8 @@ class ScalableNormalizer:
             "aliases": aliases
         }
         
-        self.data_dir.mkdir(parents=True, exist_ok=True)
-        with open(materials_file, "w") as f:
+        self.data_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(self.data_file, "w") as f:
             yaml.dump(data, f, default_flow_style=False, sort_keys=True)
         
         # Reload

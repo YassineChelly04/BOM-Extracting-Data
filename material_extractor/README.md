@@ -201,7 +201,3 @@ Normalized Records + Categories
     ▼
 Output (CSV/JSON) + Aggregation
 ```
-
-## License
-
-MIT

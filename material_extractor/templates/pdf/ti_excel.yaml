@@ -1,0 +1,36 @@
+metadata:
+  template_id: ti_excel
+  name: Texas Instruments Material Declaration
+  version: 1.0.0
+  description: Texas Instruments material declaration in Excel with Detail sheet
+  author: Material Extractor Team
+  source_type: excel
+  page_indices:
+  - 0
+  detection_method: keyword_match
+  detection_keywords:
+  - Texas Instruments
+  - Detail
+  header_keywords:
+  - Component
+  - Substance
+  - CAS
+  - Amount
+  validation_rules:
+    min_rows: 2
+    min_cols: 4
+  priority: 10
+  enabled: true
+extraction:
+  extractor_type: excel
+  extractor_class: TIExcelExtractor
+  sheet_name: Detail
+  sheet_keywords:
+  - Detail
+normalization: {}
+output:
+  fields:
+  - material
+  - substance
+  - weight_mg
+  include_raw: true

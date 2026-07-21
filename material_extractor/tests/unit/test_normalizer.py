@@ -73,7 +73,7 @@ class TestScalableNormalizer:
         normalizer = ScalableNormalizer(data_dir=tmp_path / "normalization")
         import yaml
         normalizer.data_dir.mkdir(parents=True, exist_ok=True)
-        with open(normalizer.data_dir / "substances.yaml", "w") as f:
+        with open(normalizer.data_file, "w") as f:
             yaml.dump({
                 "Copper (Cu)": {"aliases": ["cu", "copper"], "cas_number": "7440-50-8"},
             }, f)
@@ -103,13 +103,10 @@ class TestScalableNormalizer:
         normalizer = ScalableNormalizer(data_dir=tmp_path / "normalization")
         import yaml
         normalizer.data_dir.mkdir(parents=True, exist_ok=True)
-        with open(normalizer.data_dir / "materials.yaml", "w") as f:
+        with open(normalizer.data_file, "w") as f:
             yaml.dump({
                 "Test 1": {"category": "Metal", "aliases": ["t1"]},
                 "Test 2": {"category": "Polymer", "aliases": ["t2"]},
-            }, f)
-        with open(normalizer.data_dir / "substances.yaml", "w") as f:
-            yaml.dump({
                 "Substance 1": {"aliases": ["s1"]},
             }, f)
         
@@ -118,7 +115,7 @@ class TestScalableNormalizer:
         stats = normalizer.stats()
         
         assert stats["materials"] == 2
-        assert stats["substances"] == 1
+        assert stats["substances"] == 3
         assert stats["total_aliases"] >= 3
     
     def test_normalize_record(self, tmp_path):
@@ -148,6 +145,34 @@ class TestScalableNormalizer:
         assert result.category == MaterialCategory.METAL
         assert result.confidence <= 1.0
         assert result.normalization_method is not None
+
+
+    def test_real_data_file_loads(self):
+        """Validate the actual normalization/materials.yaml file loads correctly."""
+        normalizer = ScalableNormalizer()
+        normalizer.load()
+        stats = normalizer.stats()
+        assert stats["materials"] > 0
+        assert stats["total_aliases"] > 0
+
+    def test_real_data_materials_resolve(self):
+        """Test common materials resolve correctly against the real data file."""
+        normalizer = ScalableNormalizer()
+        normalizer.load()
+
+        result = normalizer.normalize("copper")
+        assert result.normalized == "Copper (Cu)"
+        assert result.category.value == "Metal"
+        assert result.confidence > 0.9
+
+        result = normalizer.normalize("nickel")
+        assert result.normalized == "Nickel (Ni)"
+
+        result = normalizer.normalize("gold")
+        assert result.normalized == "Gold (Au)"
+
+        result = normalizer.normalize("epoxy")
+        assert result.normalized == "Epoxy Resin"
 
 
 if __name__ == "__main__":

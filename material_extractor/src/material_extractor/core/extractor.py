@@ -123,8 +123,8 @@ class PDFTableExtractor(BaseExtractor, PDFExtractorMixin):
                     tables = self._extract_tables(pdf, page_idx)
                     result.tables_found += len(tables)
                     
-                    for table in tables:
-                        records = self._process_table(table, page_idx)
+                    for table_idx, table in enumerate(tables):
+                        records = self._process_table(table, page_idx, table_idx)
                         result.records.extend(records)
                         if records:
                             result.tables_processed += 1
@@ -136,7 +136,7 @@ class PDFTableExtractor(BaseExtractor, PDFExtractorMixin):
         
         return result
     
-    def _process_table(self, table: list[list[str]], page_num: int) -> list[MaterialRecord]:
+    def _process_table(self, table: list[list[str]], page_num: int, table_idx: int) -> list[MaterialRecord]:
         """Override in subclasses to process specific table format."""
         return []
 
@@ -178,33 +178,3 @@ class ExcelSheetExtractor(BaseExtractor, ExcelExtractorMixin):
         """Override in subclasses to process specific DataFrame format."""
         return []
 
-
-class ExtractionPipeline:
-    """Orchestrate extraction with multiple templates."""
-    
-    def __init__(self):
-        self.extractors: dict[str, type[BaseExtractor]] = {}
-    
-    def register_extractor(self, template_id: str, extractor_class: type[BaseExtractor]) -> None:
-        self.extractors[template_id] = extractor_class
-    
-    def extract(self, file_path: Path, template: TemplateDefinition) -> ExtractionResult:
-        extractor_class = self.extractors.get(template.metadata.template_id)
-        if not extractor_class:
-            # Try to find by source type
-            for ext_class in self.extractors.values():
-                if hasattr(ext_class, 'supports_source_type'):
-                    if ext_class.supports_source_type(template.metadata.source_type):
-                        extractor_class = ext_class
-                        break
-        
-        if not extractor_class:
-            return ExtractionResult(
-                success=False,
-                template_id=template.metadata.template_id,
-                source_file=str(file_path),
-                errors=[f"No extractor registered for template {template.metadata.template_id}"]
-            )
-        
-        extractor = extractor_class(template)
-        return extractor.extract(file_path)

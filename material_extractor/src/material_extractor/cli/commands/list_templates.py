@@ -5,9 +5,17 @@ import typer
 from pathlib import Path
 
 from material_extractor.templates.registry import TemplateManager
-from material_extractor.config import get_settings
 
 app = typer.Typer(name="list-templates", help="List available templates")
+
+
+def _find_templates_dir(path: Path | None) -> Path | None:
+    if path and path.exists():
+        return path
+    for p in (Path("templates"), Path("material_extractor/templates")):
+        if p.exists():
+            return p
+    return path
 
 
 @app.command()
@@ -18,11 +26,7 @@ def list_templates_cmd(
 ):
     """List all registered templates."""
     
-    manager = TemplateManager()
-    if template_dir:
-        manager.load_from_yaml(template_dir)
-    else:
-        manager.load_registry()
+    manager = TemplateManager(templates_dir=_find_templates_dir(template_dir))
     
     templates = manager.get_enabled_templates() if enabled_only else list(manager.registry.templates.values())
     
@@ -75,11 +79,7 @@ def show(
 ):
     """Show detailed template configuration."""
     
-    manager = TemplateManager()
-    if template_dir:
-        manager.load_from_yaml(template_dir)
-    else:
-        manager.load_registry()
+    manager = TemplateManager(templates_dir=_find_templates_dir(template_dir))
     
     template = manager.get_template(template_id)
     if not template:
@@ -98,11 +98,7 @@ def export(
 ):
     """Export template to YAML file."""
     
-    manager = TemplateManager()
-    if template_dir:
-        manager.load_from_yaml(template_dir)
-    else:
-        manager.load_registry()
+    manager = TemplateManager(templates_dir=_find_templates_dir(template_dir))
     
     if manager.export_template_yaml(template_id, output_dir / f"{template_id}.yaml"):
         typer.echo(f"Exported {template_id} to {output_dir / f'{template_id}.yaml'}")

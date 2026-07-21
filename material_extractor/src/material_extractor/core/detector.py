@@ -168,6 +168,25 @@ class LayoutAnalysisDetector(BaseDetector):
         return True
 
 
+class KeywordMatchDetector(BaseDetector):
+    """Simple keyword-based detector."""
+
+    def detect(self, file_path: Path, file_type: SourceType) -> bool:
+        if file_type == SourceType.PDF:
+            text = self._read_pdf_text(file_path)
+        elif file_type == SourceType.EXCEL:
+            text = self._read_excel_text(file_path)
+        else:
+            return False
+
+        keywords = self.metadata.detection_keywords
+        if not keywords:
+            return False
+
+        text_lower = text.lower()
+        return all(kw.lower() in text_lower for kw in keywords)
+
+
 class CompositeDetector(BaseDetector):
     """Detector combining multiple detection methods."""
     
@@ -190,6 +209,6 @@ def create_detector(template: TemplateDefinition) -> BaseDetector:
     elif method == DetectionMethod.LAYOUT_ANALYSIS:
         return LayoutAnalysisDetector(template)
     elif method == DetectionMethod.KEYWORD_MATCH:
-        return TextPatternDetector(template)
+        return KeywordMatchDetector(template)
     else:
         return TextPatternDetector(template)
