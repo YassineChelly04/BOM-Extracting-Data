@@ -24,7 +24,7 @@
 
   --radius: 20px;
   --font: var(--font-sans), "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --font-num: var(--font-mono), ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+  --font-num: var(--font-sans), "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,11 +51,11 @@ body {
   overflow-x: hidden;
 }
 
-/* metrics use the mono face — tabular, technical, instrument-like */
+/* metrics — tabular nums in Manrope */
 .kpi .value, .stat .s-value, .total-left .v, .mat-val, .cat-val,
 .cat-share, .donut .pct .pn, .clock {
   font-family: var(--font-num);
-  font-feature-settings: "tnum" 1, "zero" 1;
+  font-variant-numeric: tabular-nums;
   letter-spacing: -0.5px;
 }
 
