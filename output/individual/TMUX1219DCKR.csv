@@ -2,10 +2,10 @@ material,substance,weight_mg,category,raw_material,template,source_file
 Copper (Cu),7440-50-8,0.010399,Metal,Copper,template7,TMUX1219DCKR.xlsx
 Gold (Au),7440-57-5,0.000005,Metal,Gold,template7,TMUX1219DCKR.xlsx
 Palladium (Pd),7440-05-3,0.000256,Metal,Palladium,template7,TMUX1219DCKR.xlsx
-Phenolic Resin,9003-35-4,0.002206,Unknown,Phenolic Resin,template7,TMUX1219DCKR.xlsx
+Phenolic Resin,9003-35-4,0.002206,Polymer,Phenolic Resin,template7,TMUX1219DCKR.xlsx
 Aluminum Oxide (Al2O3),1344-28-1,0.027533,Metal Oxide,Aluminum Oxide,template7,TMUX1219DCKR.xlsx
 Carbon Black,1333-86-4,0.000037,Filler,Carbon Black,template7,TMUX1219DCKR.xlsx
-Dicyandiamide,461-58-5,0.000184,Unknown,Dicyandiamide,template7,TMUX1219DCKR.xlsx
+Dicyandiamide (Curing Agent),461-58-5,0.000184,Polymer Additive,Dicyandiamide,template7,TMUX1219DCKR.xlsx
 Epoxy Resin,85954-11-6,0.003308,Polymer,Epoxy,template7,TMUX1219DCKR.xlsx
 Copper (Cu),7440-50-8,6.622887,Metal,Copper,template7,TMUX1219DCKR.xlsx
 Iron (Fe),7439-89-6,0.149204,Metal,Iron,template7,TMUX1219DCKR.xlsx

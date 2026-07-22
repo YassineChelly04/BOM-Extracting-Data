@@ -1,0 +1,89 @@
+material,category,total_weight_mg,occurrences
+Copper (Cu),Metal,278.255393,32
+Polycarbonate/PBT Blend (PC+PBT),Polymer,260.435,1
+Lead (Pb),Metal,220.933115,47
+Glass Fiber,Composite,179.406184,7
+Fused Silica (SiO2),Metal Oxide,166.656723,8
+Iron (Fe),Metal,136.169185,10
+Zinc (Zn),Metal,69.616168,10
+Nickel (Ni),Metal,57.044289,50
+Flame Retardant (FR),Polymer Additive,46.087,1
+Barium Titanate (BaTiO3),Ceramic,43.9836,5
+Chromium (Cr),Metal,35.135643,13
+Epoxy Resin (Bisphenol A DGEBA),Polymer,33.3256,6
+Aluminum Oxide (Al2O3),Metal Oxide,28.384033,12
+Epoxy Resin,Polymer,25.20079,34
+Tin (Sn),Metal,21.802148,21
+Gold (Au),Metal,20.807567,26
+Liquid Crystal Polymer (LCP),Polymer,18.836,1
+Antimony Trioxide (Sb2O3),Metal Oxide,16.09065,2
+Silicon Dioxide (SiO2),Metal Oxide,13.812528,17
+Silver (Ag),Metal,10.183606,36
+Additives (Trade Secret),Additive,9.903,5
+Doped Silicon (Si),Metalloid,9.694574,8
+Epoxy Resin (Phenol-Formaldehyde),Polymer,8.206,3
+Additives (Undisclosed),Additive,6.247,2
+Indium (In),Metal,4.806474,2
+Epoxy Resin (o-Cresol Novolac),Polymer,4.3356,3
+Gallium Nitride (GaN),Compound Semiconductor,3.5,1
+Barium Oxide (BaO),Metal Oxide,2.8236,1
+Gallium (Ga),Metal,2.601765,2
+Indium Nitride (InN),Compound Semiconductor,1.8,1
+Aluminum (Al),Metal,1.703377,3
+Anatase (TiO2),Metal Oxide,1.400933,2
+Silicon (Si),Metalloid,1.096216,7
+Phosphorus (P),Non-Metal,0.992974,9
+Calcium Zirconate (CaZrO3),Ceramic,0.89,1
+Carbon Black,Filler,0.768139,15
+Copper Oxide (CuO),Metal Oxide,0.35751,2
+Metal Hydroxide,Hydroxide,0.323678,1
+Yttrium Oxide (Y2O3),Metal Oxide,0.2639,2
+Magnesium Oxide (MgO),Metal Oxide,0.25339,10
+Acid Anhydride,Polymer Additive,0.18922,2
+Curing Agent (THPA),Polymer Additive,0.1806,1
+Gallium Arsenide (GaAs),Compound Semiconductor,0.170693,2
+Cured Thermosetting Resin,Polymer,0.160384,1
+Organic Phosphorus (Flame Retardant),Polymer Additive,0.140922,2
+Phenolic Resin,Polymer,0.139356,3
+Aluminum Hydroxide (Al(OH)3),Hydroxide,0.1119,1
+Lead-Containing Glass Frit,Glass,0.09589,13
+Boron Zinc Hydroxide Oxide,Hydroxide,0.0906,1
+Melamine-Based Flame Retardant,Additive,0.0906,1
+Barium Sulfate (BaSO4),Salt,0.0668,1
+Electrode Paste (Ni),Paste,0.06,1
+Palladium (Pd),Metal,0.057648,22
+Calcium Oxide (CaO),Metal Oxide,0.05069,7
+Finish Plating (Sn),Plating,0.05,1
+Under Layer (Ni),Plating,0.03,1
+Lead-Free Glass (Bi-Si-B),Glass,0.02569,4
+Zinc Oxide (ZnO),Metal Oxide,0.02275,2
+Ruthenium Oxide (RuO2),Metal Oxide,0.02034,4
+Bismuth (Bi),Metal,0.01865,1
+Solvent (Aromatic Naphtha),Solvent,0.01775,2
+Barium (Ba),Metal,0.01036,1
+Base Metal (Cu),Metal,0.01,1
+BHT (Antioxidant),Additive,0.0072,1
+Poly(isobornyl methacrylate) (PIBMA),Polymer,0.007,1
+Hydroxypropyl Methacrylate,Polymer,0.006203,1
+Polysiloxanes,Polymer,0.005116,2
+Epoxy Resin (TGIC),Polymer,0.0051,1
+Magnesium (Mg),Metal,0.004217,1
+Gallium Phosphide (GaP),Compound Semiconductor,0.002656,1
+Manganese Dioxide (MnO2),Metal Oxide,0.0025,1
+Zirconium Dioxide (ZrO2),Metal Oxide,0.002,1
+Glass Oxide,Glass,0.00163,6
+Chlorine (Cl),Halogen,0.001364,3
+Adhesion Promoter,Additive,0.00125,1
+Chromium Oxide (Cr2O3),Metal Oxide,0.00095,1
+Strontium Oxide (SrO),Metal Oxide,0.0008,1
+Pigment (Unknown 1),Pigment,0.0008,1
+Pigment (Unknown 2),Pigment,0.0008,1
+Sulphur Trioxide (SO3),Metal Oxide,0.00075,1
+Dicyandiamide (Curing Agent),Polymer Additive,0.000434,2
+Tripropylene Glycol Diacrylate,Polymer,0.000433,1
+Indium Oxide (In2O3),Metal Oxide,0.000306,1
+Indium Tin Oxide (ITO),Metal Oxide,0.000202,1
+Tricobalt Tetraoxide (Co3O4),Metal Oxide,0.0002,1
+Aluminum Nitride (AlN),Ceramic,0.000144,1
+Cobalt (Co),Metal,0.00002,1
+Others,Unknown,0.000008,1

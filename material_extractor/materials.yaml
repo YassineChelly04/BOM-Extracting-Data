@@ -1,3 +1,8 @@
+Acid Anhydride:
+  aliases:
+  - acid anhydride
+  - anhydride
+  category: Polymer Additive
 Additives (Trade Secret):
   aliases:
   - trade secret
@@ -8,18 +13,30 @@ Additives (Undisclosed):
   aliases:
   - undisclosed
   - miscellaneous
+  - pigment portion, not to declare
+  category: Additive
+Adhesion Promoter:
+  aliases:
+  - adhesion promoter
   category: Additive
 Aluminum (Al):
   aliases:
   - aluminum
   - aluminium
   - al
+  - aluminium (al)
   category: Metal
 Aluminum Hydroxide (Al(OH)3):
   aliases:
   - aluminium hydroxide (al(oh)3)
   - aluminum hydroxide
   category: Hydroxide
+Aluminum Nitride (AlN):
+  aliases:
+  - aluminum nitride
+  - aluminium nitride
+  - aln
+  category: Ceramic
 Aluminum Oxide (Al2O3):
   aliases:
   - aluminum oxide
@@ -30,6 +47,7 @@ Anatase (TiO2):
   aliases:
   - anatase
   - tio2
+  - titanium dioxide
   category: Metal Oxide
 Antimony Trioxide (Sb2O3):
   aliases:
@@ -37,6 +55,18 @@ Antimony Trioxide (Sb2O3):
   - diantimony trioxide
   - sb2o3
   category: Metal Oxide
+BHT (Antioxidant):
+  aliases:
+  - 2,6-di-tert-butyl-4-methylphenol
+  - bht
+  - butylated hydroxytoluene
+  category: Additive
+Barium (Ba):
+  aliases:
+  - barium
+  - ba
+  - barium (ba)
+  category: Metal
 Barium Oxide (BaO):
   aliases:
   - barium oxide
@@ -51,6 +81,9 @@ Barium Titanate (BaTiO3):
   aliases:
   - barium titanate
   - batio3
+  - barium titanium oxide (batio3)
+  - barium titanate(iv)
+  - barium titanate (iv)
   category: Ceramic
 Base Metal (Cu):
   aliases:
@@ -62,6 +95,10 @@ Bismuth (Bi):
   - bismuth
   - bi
   category: Metal
+Boron Zinc Hydroxide Oxide:
+  aliases:
+  - boron zinc hydroxide oxide
+  category: Hydroxide
 Calcium Oxide (CaO):
   aliases:
   - calcium oxide
@@ -75,6 +112,7 @@ Calcium Zirconate (CaZrO3):
 Carbon Black:
   aliases:
   - carbon black
+  - carbon black (c)
   category: Filler
 Chlorine (Cl):
   aliases:
@@ -86,6 +124,12 @@ Chromium (Cr):
   - chromium
   - cr
   category: Metal
+Chromium Oxide (Cr2O3):
+  aliases:
+  - chromium (iii) oxide
+  - chromium oxide
+  - cr2o3
+  category: Metal Oxide
 Cobalt (Co):
   aliases:
   - cobalt
@@ -102,11 +146,21 @@ Copper Oxide (CuO):
   aliases:
   - copper oxide
   - cuo
+  - copper oxide ( derivaties-1)
+  - copper oxide (derivaties-1)
   category: Metal Oxide
+Cured Thermosetting Resin:
+  aliases:
+  - cured thermosetting resin
+  category: Polymer
 Curing Agent (THPA):
   aliases:
   - tetrahydrophthalic anhydride
   - thpa
+  category: Polymer Additive
+Dicyandiamide (Curing Agent):
+  aliases:
+  - dicyandiamide
   category: Polymer Additive
 Doped Silicon (Si):
   aliases:
@@ -122,10 +176,16 @@ Epoxy Resin:
   aliases:
   - epoxy
   - epoxy resin
+  - epidian
+  - epoxy resine
+  - epoxy resin a
+  - epoxy resin b
   category: Polymer
 Epoxy Resin (Bisphenol A DGEBA):
   aliases:
   - bisphenol a diglycidyl ether resin
+  - bisphenol a-bisphenol a diglycidyl ether polymer
+  - bisphenol-a epoxy resin
   category: Polymer
 Epoxy Resin (Phenol-Formaldehyde):
   aliases:
@@ -138,6 +198,8 @@ Epoxy Resin (TGIC):
 Epoxy Resin (o-Cresol Novolac):
   aliases:
   - o-cresol, formaldehyde, epichlorohydrin polymer
+  - ortho-cresol novolac resin
+  - o-cresol novolac
   category: Polymer
 Finish Plating (Sn):
   aliases:
@@ -145,11 +207,23 @@ Finish Plating (Sn):
   - plating
   - finish plating (sn)
   category: Plating
+Flame Retardant (FR):
+  aliases:
+  - flame retardant, iso 1043-4 fr(17)
+  - flame retardant
+  - fr(17)
+  category: Polymer Additive
 Fused Silica (SiO2):
   aliases:
   - fused silica
   - silica fused
   category: Metal Oxide
+Gallium (Ga):
+  aliases:
+  - gallium
+  - ga
+  - gallium (ga)
+  category: Metal
 Gallium Arsenide (GaAs):
   aliases:
   - gallium arsenide
@@ -170,6 +244,7 @@ Glass Fiber:
   - glass fiber
   - fiber class
   - gf-fibre
+  - continuous filament fiber glass
   category: Composite
 Glass Oxide:
   aliases:
@@ -183,6 +258,10 @@ Gold (Au):
   - gold (au)
   cas_number: 7440-57-5
   category: Metal
+Hydroxypropyl Methacrylate:
+  aliases:
+  - hydroxypropyl methacrylate
+  category: Polymer
 Indium (In):
   aliases:
   - indium
@@ -193,6 +272,17 @@ Indium Nitride (InN):
   - indium nitride
   - inn
   category: Compound Semiconductor
+Indium Oxide (In2O3):
+  aliases:
+  - indium dioxide
+  - indium oxide
+  - in2o3
+  category: Metal Oxide
+Indium Tin Oxide (ITO):
+  aliases:
+  - ito
+  - indium tin oxide
+  category: Metal Oxide
 Iron (Fe):
   aliases:
   - iron
@@ -209,6 +299,9 @@ Lead-Containing Glass Frit:
   aliases:
   - glass frit( contain pb
   - lead silicate [glass]
+  - glass frit (contains pb)
+  - lead(2+) silicate
+  - lead silicate
   category: Glass
 Lead-Free Glass (Bi-Si-B):
   aliases:
@@ -234,6 +327,15 @@ Manganese Dioxide (MnO2):
   - manganese dioxide
   - mno2
   category: Metal Oxide
+Melamine-Based Flame Retardant:
+  aliases:
+  - 2,4,6-triamino-s-triazincompd.withs-
+  - melamine cyanurate
+  category: Additive
+Metal Hydroxide:
+  aliases:
+  - metal hydroxide
+  category: Hydroxide
 Nickel (Ni):
   aliases:
   - nickel
@@ -241,12 +343,22 @@ Nickel (Ni):
   - nickel (ni)
   cas_number: 7440-02-0
   category: Metal
+Organic Phosphorus (Flame Retardant):
+  aliases:
+  - organic phosphorus
+  category: Polymer Additive
 Palladium (Pd):
   aliases:
   - palladium
   - pd
   cas_number: 7440-05-3
   category: Metal
+Phenolic Resin:
+  aliases:
+  - phenolic resin
+  - phenol resin
+  - phenolic resin (novolac)
+  category: Polymer
 Phosphorus (P):
   aliases:
   - phosphorus
@@ -265,9 +377,16 @@ Poly(isobornyl methacrylate) (PIBMA):
   - poly(isobornyl) methacrylate
   - pibma
   category: Polymer
+Polycarbonate/PBT Blend (PC+PBT):
+  aliases:
+  - pc+pbt
+  - pc/pbt
+  - polycarbonate/pbt
+  category: Polymer
 Polysiloxanes:
   aliases:
   - polysiloxanes
+  - silicone
   category: Polymer
 Ruthenium Oxide (RuO2):
   aliases:
@@ -284,6 +403,9 @@ Silicon Dioxide (SiO2):
   - silicon dioxide
   - sio2
   - silica
+  - silica amorphous (sio2)
+  - amorphous silica
+  - silica, amorphous
   category: Metal Oxide
 Silver (Ag):
   aliases:
@@ -319,6 +441,10 @@ Tricobalt Tetraoxide (Co3O4):
   - tricobalt tetraoxide
   - co3o4
   category: Metal Oxide
+Tripropylene Glycol Diacrylate:
+  aliases:
+  - tripropylene glycol diacrylate
+  category: Polymer
 Under Layer (Ni):
   aliases:
   - under layer
@@ -335,12 +461,15 @@ Zinc (Zn):
   - zinc
   - zn
   - zinc (zn)
+  - zinc (metal)
   cas_number: 7440-66-6
   category: Metal
 Zinc Oxide (ZnO):
   aliases:
   - zinc oxide
   - zno
+  - zinc monoxide (zno)
+  - zinc monoxide
   category: Metal Oxide
 Zirconium Dioxide (ZrO2):
   aliases:

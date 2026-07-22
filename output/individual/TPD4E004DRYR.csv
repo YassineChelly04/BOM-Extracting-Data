@@ -1,11 +1,11 @@
 material,substance,weight_mg,category,raw_material,template,source_file
 Gold (Au),7440-57-5,0.008024,Metal,Gold,template7,TPD4E004DRYR.xlsx
 Palladium (Pd),7440-05-3,0.000041,Metal,Palladium,template7,TPD4E004DRYR.xlsx
-Aluminum Nitride,24304-00-5,0.000144,Unknown,Aluminum Nitride,template7,TPD4E004DRYR.xlsx
-Titanium Dioxide,13463-67-7,0.000433,Unknown,Titanium Dioxide,template7,TPD4E004DRYR.xlsx
-Hydroxypropyl Methacrylate,27813-02-1,0.006203,Unknown,Hydroxypropyl Methacrylate,template7,TPD4E004DRYR.xlsx
-Tripropylene Glycol Diacrylate,42978-66-5,0.000433,Unknown,Tripropylene Glycol Diacrylate,template7,TPD4E004DRYR.xlsx
-Anhydride,85-44-9,0.00202,Unknown,Anhydride,template7,TPD4E004DRYR.xlsx
+Aluminum Nitride (AlN),24304-00-5,0.000144,Ceramic,Aluminum Nitride,template7,TPD4E004DRYR.xlsx
+Anatase (TiO2),13463-67-7,0.000433,Metal Oxide,Titanium Dioxide,template7,TPD4E004DRYR.xlsx
+Hydroxypropyl Methacrylate,27813-02-1,0.006203,Polymer,Hydroxypropyl Methacrylate,template7,TPD4E004DRYR.xlsx
+Tripropylene Glycol Diacrylate,42978-66-5,0.000433,Polymer,Tripropylene Glycol Diacrylate,template7,TPD4E004DRYR.xlsx
+Acid Anhydride,85-44-9,0.00202,Polymer Additive,Anhydride,template7,TPD4E004DRYR.xlsx
 Epoxy Resin,85954-11-6,0.005193,Polymer,Epoxy,template7,TPD4E004DRYR.xlsx
 Copper (Cu),7440-50-8,1.942577,Metal,Copper,template7,TPD4E004DRYR.xlsx
 Iron (Fe),7439-89-6,0.04544,Metal,Iron,template7,TPD4E004DRYR.xlsx
@@ -17,7 +17,7 @@ Palladium (Pd),7440-05-3,0.000861,Metal,Palladium,template7,TPD4E004DRYR.xlsx
 Fused Silica (SiO2),60676-86-0,0.649084,Metal Oxide,Fused Silica,template7,TPD4E004DRYR.xlsx
 Silicon Dioxide (SiO2),7631-86-9,0.132466,Metal Oxide,Silica,template7,TPD4E004DRYR.xlsx
 Carbon Black,1333-86-4,0.004416,Filler,Carbon Black,template7,TPD4E004DRYR.xlsx
-Organic Phosphorus,1330-78-5,0.004416,Unknown,Organic Phosphorus,template7,TPD4E004DRYR.xlsx
-Silicone,218163-11-2,0.004416,Unknown,Silicone,template7,TPD4E004DRYR.xlsx
+Organic Phosphorus (Flame Retardant),1330-78-5,0.004416,Polymer Additive,Organic Phosphorus,template7,TPD4E004DRYR.xlsx
+Polysiloxanes,218163-11-2,0.004416,Polymer,Silicone,template7,TPD4E004DRYR.xlsx
 Epoxy Resin,85954-11-6,0.088311,Polymer,Epoxy,template7,TPD4E004DRYR.xlsx
 Doped Silicon (Si),7440-21-3,0.113669,Metalloid,Doped Silicon,template7,TPD4E004DRYR.xlsx

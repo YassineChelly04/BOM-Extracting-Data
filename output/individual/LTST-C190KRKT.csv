@@ -1,0 +1,27 @@
+material,substance,weight_mg,category,raw_material,template,source_file
+Gold (Au),7440-57-5,0.000626,Metal,Gold,template8,LTST-C190KRKT.pdf
+Chromium (Cr),7440-47-3,0.000003,Metal,Chromium,template8,LTST-C190KRKT.pdf
+Indium Tin Oxide (ITO),50926-11-9,0.000202,Metal Oxide,ITO,template8,LTST-C190KRKT.pdf
+Gallium (Ga),7440-55-3,0.001765,Metal,Gallium,template8,LTST-C190KRKT.pdf
+Indium Oxide (In2O3),1312-43-2,0.000306,Metal Oxide,Indium dioxide,template8,LTST-C190KRKT.pdf
+Phosphorus (P),7723-14-0,0.001988,Non-Metal,Phosphorus,template8,LTST-C190KRKT.pdf
+Aluminum (Al),7429-90-5,0.000306,Metal,Aluminum,template8,LTST-C190KRKT.pdf
+Gallium Arsenide (GaAs),1303-00-0,0.101803,Compound Semiconductor,Gallium arsenide,template8,LTST-C190KRKT.pdf
+Silver (Ag),7440-22-4,0.01975,Metal,Silver,template8,LTST-C190KRKT.pdf
+Epoxy Resin,9003-36-5,0.00125,Polymer,Epoxy Resin A,template8,LTST-C190KRKT.pdf
+Adhesion Promoter,TRADE SECRET,0.00125,Additive,Adhesion Promoter,template8,LTST-C190KRKT.pdf
+Epoxy Resin,26447-14-3,0.00125,Polymer,Epoxy Resin B,template8,LTST-C190KRKT.pdf
+Phenolic Resin,TRADE SECRET-,0.00125,Polymer,Phenol Resin,template8,LTST-C190KRKT.pdf
+Dicyandiamide (Curing Agent),461-58-5,0.00025,Polymer Additive,Dicyandiamide,template8,LTST-C190KRKT.pdf
+Copper (Cu),7440-50-8,0.20468,Metal,Copper,template8,LTST-C190KRKT.pdf
+Nickel (Ni),7440-02-0,0.000392,Metal,Nickel,template8,LTST-C190KRKT.pdf
+Silver (Ag),7440-22-4,0.020888,Metal,Ag,template8,LTST-C190KRKT.pdf
+Gold (Au),7440-57-5,0.002912,Metal,Au,template8,LTST-C190KRKT.pdf
+Barium (Ba),7727-43-7,0.01036,Metal,Ba,template8,LTST-C190KRKT.pdf
+Glass Fiber,,0.160384,Composite,Continuous Filament Fiber Glass,template8,LTST-C190KRKT.pdf
+Cured Thermosetting Resin,N/A,0.160384,Polymer,Cured thermosetting resin,template8,LTST-C190KRKT.pdf
+Gold (Au),7440-57-5,0.084991,Metal,Au,template8,LTST-C190KRKT.pdf
+Others,/,0.000008,Unknown,Others,template8,LTST-C190KRKT.pdf
+Epoxy Resin (Bisphenol A DGEBA),25068-38-6,0.5256,Polymer,Bisphenol-A Epoxy Resin,template8,LTST-C190KRKT.pdf
+Acid Anhydride,85-43-8,0.1872,Polymer Additive,Acid Anhydride,template8,LTST-C190KRKT.pdf
+BHT (Antioxidant),128-37-0,0.0072,Additive,"2,6-Di-tert-butyl-4-Methylphenol",template8,LTST-C190KRKT.pdf

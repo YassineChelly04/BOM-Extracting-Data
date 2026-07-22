@@ -7,3 +7,7 @@ env-test/
 material_extractor/.cache/
 material_extractor/.pytest_cache/
 raw_data/
+
+# extraction result cache (auto-generated, safe to delete)
+.extract_cache.json
+**/.extract_cache.json

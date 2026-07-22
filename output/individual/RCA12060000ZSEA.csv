@@ -1,17 +1,17 @@
 material,substance,weight_mg,category,raw_material,template,source_file
 Magnesium Oxide (MgO),1309-48-4,0.07878,Metal Oxide,Magnesium Oxide,template9,RCA12060000ZSEA.pdf
-Aluminum Oxide (Al2O3),1344-28-1,7.61010,Metal Oxide,Aluminium Oxide,template9,RCA12060000ZSEA.pdf
+Aluminum Oxide (Al2O3),1344-28-1,7.6101,Metal Oxide,Aluminium Oxide,template9,RCA12060000ZSEA.pdf
 Silicon Dioxide (SiO2),7631-86-9,0.23155,Metal Oxide,Silicon Dioxide,template9,RCA12060000ZSEA.pdf
-Lead(2+) Silicate,10099-76-0,0.04450,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
-Chromium (III) Oxide,1308-38-9,0.00095,Unknown,Chromium (III) Oxide,template9,RCA12060000ZSEA.pdf
-Lead(2+) Silicate,10099-76-0,0.01322,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Lead-Containing Glass Frit,10099-76-0,0.0445,Glass,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Chromium Oxide (Cr2O3),1308-38-9,0.00095,Metal Oxide,Chromium (III) Oxide,template9,RCA12060000ZSEA.pdf
+Lead-Containing Glass Frit,10099-76-0,0.01322,Glass,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
 Silver (Ag),7440-22-4,0.01762,Metal,Silver,template9,RCA12060000ZSEA.pdf
-Lead(2+) Silicate,10099-76-0,0.00460,Unknown,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
-Copper Oxide ( Derivaties-1),1317-38-0,0.00576,Unknown,Copper Oxide ( Derivaties-1),template9,RCA12060000ZSEA.pdf
+Lead-Containing Glass Frit,10099-76-0,0.0046,Glass,Lead(2+) Silicate,template9,RCA12060000ZSEA.pdf
+Copper Oxide (CuO),1317-38-0,0.00576,Metal Oxide,Copper Oxide ( Derivaties-1),template9,RCA12060000ZSEA.pdf
 Nickel (Ni),7440-02-0,0.14766,Metal,Nickel,template9,RCA12060000ZSEA.pdf
 Silver (Ag),7440-22-4,0.21981,Metal,Silver,template9,RCA12060000ZSEA.pdf
 Tin (Sn),7440-31-5,0.27423,Metal,Tin,template9,RCA12060000ZSEA.pdf
-Chromium (Cr),7440-47-3,0.00000,Metal,Chromium,template9,RCA12060000ZSEA.pdf
+Chromium (Cr),7440-47-3,0,Metal,Chromium,template9,RCA12060000ZSEA.pdf
 Copper (Cu),7440-50-8,0.00001,Metal,Copper,template9,RCA12060000ZSEA.pdf
-Epoxy Resine,25068-38-6,0.01725,Unknown,Epoxy Resine,template9,RCA12060000ZSEA.pdf
-Silicon Dioxide (SiO2),7631-86-9,0.12220,Metal Oxide,Silicon Dioxide,template9,RCA12060000ZSEA.pdf
+Epoxy Resin,25068-38-6,0.01725,Polymer,Epoxy Resine,template9,RCA12060000ZSEA.pdf
+Silicon Dioxide (SiO2),7631-86-9,0.1222,Metal Oxide,Silicon Dioxide,template9,RCA12060000ZSEA.pdf

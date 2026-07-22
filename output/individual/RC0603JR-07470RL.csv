@@ -1,7 +1,7 @@
 material,substance,weight_mg,category,raw_material,template,source_file
-Aluminum Oxide (Al2O3),1344-28-1,2.13120,Metal Oxide,Al2O3,template13,RC0603JR-07470RL.pdf
-Silicon Dioxide (SiO2),14808-60-7,0.04440,Metal Oxide,SiO2,template13,RC0603JR-07470RL.pdf
-Magnesium Oxide (MgO),1309-48-4,0.04440,Metal Oxide,MgO,template13,RC0603JR-07470RL.pdf
+Aluminum Oxide (Al2O3),1344-28-1,2.1312,Metal Oxide,Al2O3,template13,RC0603JR-07470RL.pdf
+Silicon Dioxide (SiO2),14808-60-7,0.0444,Metal Oxide,SiO2,template13,RC0603JR-07470RL.pdf
+Magnesium Oxide (MgO),1309-48-4,0.0444,Metal Oxide,MgO,template13,RC0603JR-07470RL.pdf
 Silver (Ag),7440-22-4,0.02095,Metal,Ag,template13,RC0603JR-07470RL.pdf
 Palladium (Pd),7440-05-3,0.00032,Metal,Pd,template13,RC0603JR-07470RL.pdf
 Silver (Ag),7440-22-4,0.00964,Metal,Ag,template13,RC0603JR-07470RL.pdf

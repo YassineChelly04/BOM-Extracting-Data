@@ -20,16 +20,23 @@ def extract(pdf_path: str) -> list[dict]:
     material_table = tables[1]  # Semi-Component breakdown
     part_table     = tables[2]  # Part List (Type/Size/PartNo, Mass)
 
-    # Parse total mass from "0.01g" -> 0.01
+    # Parse total mass from "0.01g" -> 0.01 (comma is a European decimal point)
     raw_mass = part_table[1][1]                           # e.g. "0.01g"
-    total_mass_g = float(raw_mass.lower().replace("g", ""))
+    total_mass_g = float(raw_mass.lower().replace("g", "").replace(",", ".").strip())
 
     results = []
     for row in material_table[1:]:                        # skip header
-        _, _, substance, _, avg_mass, _ = row
+        if len(row) < 5:
+            continue
+        _, _, substance, _, avg_mass = row[:5]
         if not substance or not avg_mass:
             continue
-        weight_mg = round(float(avg_mass) / 100 * total_mass_g * 1000, 4)
+        # Average mass [%] may use a comma as the decimal separator ("17,000" = 17.0)
+        try:
+            pct = float(str(avg_mass).replace(",", ".").strip())
+        except ValueError:
+            continue
+        weight_mg = round(pct / 100 * total_mass_g * 1000, 4)
         results.append({
             "material":  substance.replace("\n", " "),
             "weight_mg": weight_mg,

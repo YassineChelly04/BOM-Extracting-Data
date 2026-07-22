@@ -30,6 +30,12 @@ class Normalizer:
         self._category: dict[str, str] = {}
         self._load()
 
+    @staticmethod
+    def _key(text: str) -> str:
+        """Match key: lowercase with all whitespace removed, so 'Nickel(Ni)'
+        and 'nickel (ni)' collapse to the same thing."""
+        return "".join(str(text).lower().split())
+
     def _load(self) -> None:
         if not self.data_file.exists():
             return
@@ -39,14 +45,13 @@ class Normalizer:
         for canonical, info in data.items():
             category = (info or {}).get("category", "Unknown")
             self._category[canonical] = category
-            self._alias_to_canonical[canonical.lower()] = canonical
+            self._alias_to_canonical[self._key(canonical)] = canonical
             for alias in (info or {}).get("aliases", []):
-                self._alias_to_canonical[str(alias).lower()] = canonical
+                self._alias_to_canonical[self._key(alias)] = canonical
 
     def normalize_name(self, name: str) -> tuple[str, str]:
         """Return (canonical_name, category). Falls back to (name, 'Unknown')."""
-        key = (name or "").strip().lower()
-        canonical = self._alias_to_canonical.get(key)
+        canonical = self._alias_to_canonical.get(self._key(name))
         if canonical:
             return canonical, self._category.get(canonical, "Unknown")
         return name, "Unknown"

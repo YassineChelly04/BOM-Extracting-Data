@@ -1,0 +1,135 @@
+<mxfile host="Electron" agent="material-extractor">
+  <diagram id="material-extractor-flow" name="Material Extractor — Flow">
+    <mxGraphModel dx="858" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="1480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_cli" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;arcSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" value="&lt;b&gt;Start&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="660" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="n_main" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#E7F5FF;strokeColor=#1C7ED6;strokeWidth=2;" value="&lt;b&gt;__main__.py&lt;/b&gt;" vertex="1">
+          <mxGeometry height="52" width="310" x="570" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="n_run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF3BF;strokeColor=#F08C00;strokeWidth=2;" value="&lt;b&gt;pipeline.run(input, output)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;builds the pipeline, then drives it&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="310" x="570" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="n_pipe" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF3BF;strokeColor=#F08C00;strokeWidth=2;" value="&lt;b&gt;Pipeline()&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;created once&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="260" x="595" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="n_discover" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#E6FCF5;strokeColor=#0CA678;strokeWidth=2;" value="&lt;b&gt;discover_templates()&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;import every module in templates/&lt;br&gt;keep those with detect() + extract()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="270" x="250" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="s_templates" parent="1" style="shape=note;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=11;fontColor=#212529;fillColor=#E6FCF5;strokeColor=#0CA678;strokeWidth=2;size=16;" value="&lt;b&gt;templates/&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot;&gt;template1.py&lt;br&gt;template2.py&lt;br&gt;… &lt;br&gt;template14.py&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="140" x="70" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="n_norm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#F3F0FF;strokeColor=#7048E8;strokeWidth=2;" value="&lt;b&gt;Normalizer()&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;load materials.yaml into&lt;br&gt;alias → canonical + category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="270" x="930" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="s_yaml" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;shadow=1;fontFamily=Verdana;fontSize=11;fontColor=#212529;fillColor=#F3F0FF;strokeColor=#7048E8;strokeWidth=2;size=14;" value="&lt;b&gt;materials.yaml&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot;&gt;canonical names,&lt;br&gt;aliases, categories&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="140" x="1240" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="n_path" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF3BF;strokeColor=#F08C00;strokeWidth=2;" value="&lt;b&gt;process_path()&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;gather .pdf / .xlsx files → for each file ↓&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="330" x="560" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="n_pf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=13;fontColor=#212529;arcSize=14;fillColor=#FFF3BF;strokeColor=#F08C00;strokeWidth=2;" value="&lt;b&gt;process_file(path)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="46" width="260" x="595" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="d_detect" parent="1" style="rhombus;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;fillColor=#FFE8CC;strokeColor=#E8590C;strokeWidth=2;" value="&lt;b&gt;template.detect(path)&lt;/b&gt;&lt;br&gt;is this file this&lt;br&gt;supplier’s format?" vertex="1">
+          <mxGeometry height="110" width="270" x="590" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="n_unmatched" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#F1F3F5;strokeColor=#ADB5BD;strokeWidth=2;" value="&lt;b&gt;Uses Defaulttemplate.py with PaddleOCR&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="330" x="1130" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="n_extract" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#E6FCF5;strokeColor=#0CA678;strokeWidth=2;" value="&lt;b&gt;template.extract(path)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;read the table → list of rows&lt;br&gt;{ material, substance, weight_mg (mg) }&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64" width="290" x="580" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="n_normrec" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#F3F0FF;strokeColor=#7048E8;strokeWidth=2;" value="&lt;b&gt;for each row&lt;/b&gt;&lt;br&gt;normalize_record()  →  canonical name + category (keeps raw_material)&lt;br&gt;_to_mg()  →  weight_mg coerced to a clean float" vertex="1">
+          <mxGeometry height="50" width="475" x="488" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="n_result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF3BF;strokeColor=#F08C00;strokeWidth=2;" value="&lt;b&gt;Result(template, records[])&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;collected by run()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="260" x="595" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="o_indiv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF0F6;strokeColor=#E64980;strokeWidth=2;" value="&lt;b&gt;individual/&amp;lt;file&amp;gt;.csv&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;one report per input file&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="150" y="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="o_all" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF0F6;strokeColor=#E64980;strokeWidth=2;" value="&lt;b&gt;all_materials.csv&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;every row, detailed (plain-decimal weights)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="320" x="560" y="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="o_sum" parent="1" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;fontFamily=Verdana;fontSize=12;fontColor=#212529;arcSize=14;fillColor=#FFF0F6;strokeColor=#E64980;strokeWidth=2;" value="&lt;b&gt;materials_summary.csv&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#868E96&quot;&gt;summarize() — weight_mg summed per material&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="330" x="1000" y="1250" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="n_cli" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="n_main" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_run">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="n_run" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_pipe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="n_pipe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0CA678;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#0CA678;fontFamily=Verdana;" target="n_discover" value="discover">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="n_pipe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7048E8;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#7048E8;fontFamily=Verdana;" target="n_norm" value="build">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n_discover" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0CA678;strokeWidth=2;endArrow=open;dashed=1;fontSize=11;fontColor=#0CA678;fontFamily=Verdana;" target="s_templates" value="imports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n_norm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7048E8;strokeWidth=2;endArrow=open;dashed=1;fontSize=11;fontColor=#7048E8;fontFamily=Verdana;" target="s_yaml" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n_pipe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_path">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n_path" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_pf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="n_pf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#495057;fontFamily=Verdana;" target="d_detect" value="try each template">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="d_detect" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2F9E44;strokeWidth=2.5;endArrow=block;fontSize=11;fontColor=#2F9E44;fontStyle=1;fontFamily=Verdana;" target="n_extract" value="✓ first match wins">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="d_detect" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E8590C;strokeWidth=2;endArrow=block;dashed=1;fontSize=11;fontColor=#E8590C;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;" target="n_pf" value="✗ no → try next template">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="d_detect" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ADB5BD;strokeWidth=2;endArrow=block;dashed=1;fontSize=11;fontColor=#868E96;fontFamily=Verdana;" target="n_unmatched" value="none matched">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="n_extract" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_normrec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="n_normrec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7048E8;strokeWidth=2;endArrow=open;dashed=1;fontSize=11;fontColor=#7048E8;fontFamily=Verdana;" target="n_norm" value="uses">
+          <mxGeometry relative="1" x="-0.5157" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1065" y="1037" />
+              <mxPoint x="1065" y="482" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="n_normrec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#868E96;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="n_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="n_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#F08C00;strokeWidth=2;endArrow=block;dashed=1;fontSize=11;fontColor=#F08C00;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;" target="n_path" value="next file ↺">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="1126" />
+              <mxPoint x="480" y="626" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="n_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E64980;strokeWidth=2;endArrow=block;fontSize=11;fontColor=#E64980;fontFamily=Verdana;" target="o_all" value="after all files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="n_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E64980;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="o_indiv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="n_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E64980;strokeWidth=2;endArrow=block;fontFamily=Verdana;" target="o_sum">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
