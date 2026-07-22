@@ -7,7 +7,6 @@ Examples:
     python -m material_extractor ../Data --output output
 """
 from __future__ import annotations
-
 import argparse
 from pathlib import Path
 
