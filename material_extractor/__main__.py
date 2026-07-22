@@ -4,7 +4,10 @@
 
 Examples:
     python -m material_extractor templates/test_files
-    python -m material_extractor ../Data --output output
+    python -m material_extractor ../Data
+
+By default results are written to the package's own ``output/`` folder
+(``material_extractor/output``), regardless of the current directory.
 """
 from __future__ import annotations
 import argparse
@@ -12,13 +15,16 @@ from pathlib import Path
 
 from material_extractor.pipeline import run
 
+# results live alongside the package, not wherever the command was launched
+DEFAULT_OUTPUT = Path(__file__).resolve().parent / "output"
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="material_extractor",
                                      description="Extract material composition from supplier PDFs/XLSXs.")
     parser.add_argument("input", type=Path, help="File or directory to process")
-    parser.add_argument("--output", "-o", type=Path, default=Path("output"),
-                        help="Output directory (default: output)")
+    parser.add_argument("--output", "-o", type=Path, default=DEFAULT_OUTPUT,
+                        help="Output directory (default: material_extractor/output)")
     args = parser.parse_args()
 
     if not args.input.exists():

@@ -54,7 +54,7 @@ dictionary.
 1. pipeline.py asks each template in turn:  template.detect(file)?
 2. first template that says "yes" wins  →  template.extract(file)
 3. each extracted row  →  normalizer  →  official name + category
-4. rows written to  output/individual/<file>.csv  and  output/all_materials.csv
+4. rows written to  material_extractor/output/individual/<file>.csv  and  .../all_materials.csv
 ```
 
 The only thing that differs per supplier is *which* template handles steps 1–2.
@@ -64,16 +64,20 @@ The only thing that differs per supplier is *which* template handles steps 1–2
 ## Run
 
 ```bash
-python -m material_extractor <file-or-dir> [--output output]
+python -m material_extractor <file-or-dir> [--output OUTDIR]
 
 # examples
-python -m material_extractor templates/test_files      # the bundled samples
-python -m material_extractor ../Data --output output   # the real datasheets
+python -m material_extractor templates/test_files   # the bundled samples
+python -m material_extractor ../Data                 # the real datasheets
 ```
 
+Results are written to `material_extractor/output/` by default (next to the
+package, regardless of where you run the command). Pass `--output` to override.
+
 Output:
-- `output/individual/<name>.csv` — one report per input file
-- `output/all_materials.csv` — everything combined
+- `material_extractor/output/individual/<name>.csv` — one report per input file
+- `material_extractor/output/all_materials.csv` — everything combined
+- `material_extractor/output/materials_summary.csv` — aggregated by material
 
 ---
 

@@ -139,10 +139,13 @@ cython_debug/
 *~
 
 # Project specific
-output/
 data/cache/
 *.pdf
 *.xlsx
 *.csv
 !data/normalization/*.yaml
 !templates/**/*.yaml
+# extraction output is a versioned deliverable — keep it tracked
+!output/
+!output/**
+output/.extract_cache.json

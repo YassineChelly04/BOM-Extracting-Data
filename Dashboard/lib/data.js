@@ -1,4 +1,4 @@
-// Auto-generated from output/materials_summary.csv
+// Auto-generated from material_extractor/output/materials_summary.csv
 const data = {
   "materials": [
     {
