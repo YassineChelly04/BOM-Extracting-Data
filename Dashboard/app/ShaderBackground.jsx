@@ -13,6 +13,7 @@ uniform vec2  u_res;
 uniform float u_time;
 uniform vec2  u_mouse;   // smoothed cursor, pixels
 uniform float u_active;  // 0..1 how "recent" the cursor moved
+uniform vec3  u_tone;    // verdict colour — the field drifts toward it
 
 // layered directional swells travelling across the surface
 float waveField(vec2 p, float t){
@@ -52,6 +53,11 @@ void main(){
   vec3 green  = vec3(0.20, 0.66, 0.33);
   vec3 forest = vec3(0.08, 0.42, 0.22);
 
+  // pull the whole field toward the verdict colour so the background carries it
+  teal   = mix(teal,   u_tone + vec3(0.30), 0.55);
+  green  = mix(green,  u_tone, 0.60);
+  forest = mix(forest, u_tone * 0.65, 0.60);
+
   vec3 col = mix(teal, green, smoothstep(0.15, 0.85, v));
   col = mix(col, forest, glow * 0.55);
   col += crest * 0.12;                       // foam highlight on the crests
@@ -71,8 +77,21 @@ attribute vec2 a_pos;
 void main(){ gl_Position = vec4(a_pos, 0.0, 1.0); }
 `;
 
-export default function ShaderBackground() {
+/** Verdict colours, normalised RGB, matching CONVEYOR_TONE in lib/model.js. */
+const TONE_RGB = {
+  rare: [0.72, 0.52, 0.04],
+  common: [0.16, 0.47, 0.84],
+  unknown: [0.42, 0.48, 0.44],
+};
+
+export default function ShaderBackground({ tone = "unknown" }) {
   const ref = useRef(null);
+  const toneRef = useRef(TONE_RGB[tone] || TONE_RGB.unknown);
+
+  /* Keep the live value in a ref so a verdict change never restarts the GL loop. */
+  useEffect(() => {
+    toneRef.current = TONE_RGB[tone] || TONE_RGB.unknown;
+  }, [tone]);
 
   useEffect(() => {
     const canvas = ref.current;
@@ -105,6 +124,9 @@ export default function ShaderBackground() {
     const uTime = gl.getUniformLocation(prog, "u_time");
     const uMouse = gl.getUniformLocation(prog, "u_mouse");
     const uActive = gl.getUniformLocation(prog, "u_active");
+    const uTone = gl.getUniformLocation(prog, "u_tone");
+    /* eased so a verdict flip glides rather than snaps */
+    const shown = [...toneRef.current];
 
     const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     const resize = () => {
@@ -135,6 +157,9 @@ export default function ShaderBackground() {
       gl.uniform1f(uTime, (now - start) / 1000);
       gl.uniform2f(uMouse, cur.x, cur.y);
       gl.uniform1f(uActive, active);
+      const want = toneRef.current;
+      for (let i = 0; i < 3; i++) shown[i] += (want[i] - shown[i]) * 0.05;
+      gl.uniform3f(uTone, shown[0], shown[1], shown[2]);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       raf = requestAnimationFrame(loop);
     };

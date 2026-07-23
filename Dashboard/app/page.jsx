@@ -1,187 +1,90 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import data from "@/lib/data";
+import { useEffect, useMemo, useState } from "react";
 import ShaderBackground from "./ShaderBackground";
+import {
+  ArcGauge, MassValueScatter, Treemap, StackBar, Legend, Meter, Tooltip,
+  fmt, usd, pct, mg,
+} from "./charts";
+import { buildModel, PRODUCT, CONVEYOR_TONE } from "@/lib/model";
+import { BUCKETS, CRM_LIST_LABEL } from "@/lib/criticality";
+import { DEFAULTS, BREAK_EVEN, ELEMENT_ECONOMICS, PRICES_AS_OF, PRICE_SOURCE } from "@/lib/config";
 
-/* ---------- helpers ---------- */
-function fmt(n, dec = 1) {
-  return Number(n).toLocaleString("en-US", {
-    minimumFractionDigits: dec,
-    maximumFractionDigits: dec,
-  });
-}
-function fmtInt(n) {
-  return Math.round(n).toLocaleString("en-US");
-}
-
-/* modern SVG icons live as real files in /public/svg — tinted via CSS mask */
-function Svg({ name, size = 20, className = "" }) {
+function Svg({ name, size = 18 }) {
   return (
-    <span
-      className={`svgi ${className}`}
-      aria-hidden="true"
-      style={{
-        width: size,
-        height: size,
-        WebkitMaskImage: `url(/svg/${name}.svg)`,
-        maskImage: `url(/svg/${name}.svg)`,
-      }}
-    />
+    <span className="svgi" aria-hidden="true"
+      style={{ width: size, height: size, WebkitMaskImage: `url(/svg/${name}.svg)`, maskImage: `url(/svg/${name}.svg)` }} />
   );
 }
 
-/* one icon per material category, reused for badges + breakdown rows */
-const CAT_ICON = {
-  Metal: "metal",
-  Polymer: "polymer",
-  "Metal Oxide": "metal-oxide",
-  Composite: "composite",
-  "Polymer Additive": "polymer-additive",
-  Ceramic: "ceramic",
-  Additive: "additive",
-  Metalloid: "metalloid",
-};
-const catIcon = (cat) => CAT_ICON[cat] || "materials";
-
-/* ---------- count-up ---------- */
-function useCountUp(target, { dec = 0, duration = 1400 } = {}) {
-  const [v, setV] = useState(0);
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(target); return; }
-    let raf, start;
-    const step = (t) => {
-      if (!start) start = t;
-      const p = Math.min((t - start) / duration, 1);
-      setV(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) raf = requestAnimationFrame(step);
-      else setV(target);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, dec, duration]);
-  return dec > 0 ? fmt(v, dec) : fmtInt(v);
+function Panel({ title, sub, aside, children, className = "", span }) {
+  return (
+    <section className={`panel ${className}`} style={span ? { gridColumn: `span ${span}` } : undefined}>
+      {title && (
+        <header className="panel-h">
+          <div>
+            <h2>{title}</h2>
+            {sub ? <p>{sub}</p> : null}
+          </div>
+          {aside}
+        </header>
+      )}
+      <div className="panel-b">{children}</div>
+    </section>
+  );
 }
 
-/* ---------- KPI card ---------- */
-function Kpi({ icon, accent, name, value, unit, dec = 0, note }) {
-  const v = useCountUp(value, { dec });
+function Kpi({ label, value, unit, foot, tone }) {
   return (
-    <div className="card kpi" style={{ "--accent": accent }}>
-      <div className="top">
-        <span className="icon"><Svg name={icon} size={19} /></span>
-        <span className="name">{name}</span>
-      </div>
-      <div className="value">
-        <span>{v}</span>
-        {unit ? <span className="unit">{unit}</span> : null}
-      </div>
-      {note ? <div className="note"><span className="swatch" />{note}</div> : null}
+    <div className={`kpi ${tone || ""}`}>
+      <span className="kpi-k">{label}</span>
+      <span className="kpi-v">
+        {value}
+        {unit ? <small>{unit}</small> : null}
+      </span>
+      <span className="kpi-f">{foot}</span>
     </div>
   );
 }
 
-/* ---------- left stat card ---------- */
-function StatCard({ icon, accent, label, value, count, pct, delay }) {
-  const v = useCountUp(value, { dec: 1 });
-  const [w, setW] = useState(0);
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setW(pct); return; }
-    const t = setTimeout(() => setW(pct), 200);
-    return () => clearTimeout(t);
-  }, [pct]);
+/* ======================================================= VERDICT PANEL ==== */
+function Verdict({ m, cfg, setCfg, alt }) {
+  const t = CONVEYOR_TONE[m.decision.tone];
+  const flip = alt && alt.decision.conveyor !== m.decision.conveyor;
   return (
-    <div className="card stat" style={{ "--accent": accent, animationDelay: `${delay}s` }}>
-      <div className="top">
-        <div>
-          <div className="s-label">{label}</div>
-          <div className="s-value"><span>{v}</span><span className="unit">mg</span></div>
-        </div>
-        <span className="s-ic"><Svg name={icon} size={22} /></span>
+    <section className="verdict" style={{ "--tone": t.color, "--wash": t.wash, "--tone-ink": t.ink }}>
+      <div className="verdict-top">
+        <span className="verdict-k">Conveyor</span>
+        <span className="verdict-n">{m.decision.conveyor}</span>
       </div>
-      <div className="bar-track"><div className="bar-fill" style={{ width: `${w}%` }} /></div>
-      <div className="s-foot">{count} materials</div>
-    </div>
+      <div className="verdict-tone">{t.label}</div>
+      <div className="verdict-level">{m.decision.level}</div>
+      <h1>{m.decision.title}</h1>
+      <p className="verdict-why">{m.decision.rationale}</p>
+
+      <div className="verdict-guard">
+        <label className="switch">
+          <input type="checkbox" checked={cfg.excludeSuspect}
+            onChange={(e) => setCfg({ ...cfg, excludeSuspect: e.target.checked })} />
+          <span className="track"><span className="thumb" /></span>
+          <span className="switch-l">Data-quality guard</span>
+        </label>
+        {alt && (
+          <div className="verdict-delta">
+            <span>RVS {fmt(m.rvs.expected, 2)}</span>
+            <em>→</em>
+            <span className={flip ? "flip" : ""}>
+              {fmt(alt.rvs.expected, 2)} · Conveyor {alt.decision.conveyor}
+            </span>
+            <small>if {cfg.excludeSuspect ? "suspect rows are trusted" : "suspect rows are removed"}</small>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
-/* ---------- top materials row ---------- */
-function MatRow({ m, pct }) {
-  const [w, setW] = useState(0);
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setW(pct); return; }
-    const t = setTimeout(() => setW(pct), 250);
-    return () => clearTimeout(t);
-  }, [pct]);
-  return (
-    <div className="mat-row">
-      <span className="badge" title={m.category}><Svg name={catIcon(m.category)} size={18} /></span>
-      <div className="mat-mid">
-        <div className="mat-name" title={m.material}>{m.material}</div>
-        <div className="mat-bar"><span style={{ width: `${w}%` }} /></div>
-      </div>
-      <div className="mat-val">{fmt(m.weight, 1)}<small>mg</small></div>
-    </div>
-  );
-}
-
-/* ---------- category row ---------- */
-function CatRow({ c, totalWeight }) {
-  const v = useCountUp(c.weight, { dec: 1 });
-  const share = ((c.weight / totalWeight) * 100).toFixed(1);
-  return (
-    <div className="cat-row">
-      <span className="cat-ic"><Svg name={catIcon(c.category)} size={17} /></span>
-      <span className="cat-name">{c.category}</span>
-      <span className="cat-share">{share}%</span>
-      <span className="cat-val">{v}<small>mg</small></span>
-    </div>
-  );
-}
-
-/* ---------- total weight + donut (share of heaviest category) ---------- */
-function TotalCard() {
-  const v = useCountUp(data.totalWeight, { dec: 0 });
-  const C = 2 * Math.PI * 50;
-  const topCat = data.categories[0];
-  const topPct = Math.round((topCat.weight / data.totalWeight) * 100);
-  const [ready, setReady] = useState(false);
-  const [pct, setPct] = useState(0);
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setReady(true); setPct(topPct); return; }
-    const t = setTimeout(() => setReady(true), 300);
-    let p = 0;
-    const id = setInterval(() => { p += 1; if (p >= topPct) { p = topPct; clearInterval(id); } setPct(p); }, 22);
-    return () => { clearTimeout(t); clearInterval(id); };
-  }, [topPct]);
-  const dash = ready ? C * (1 - topPct / 100) : C;
-  return (
-    <div className="card total-card" style={{ animationDelay: "0.3s" }}>
-      <div className="total-left">
-        <div className="k">Total Weight</div>
-        <div className="v"><span>{v}</span><span className="unit">mg</span></div>
-        <div className="foot">across <b>{data.totalMaterials}</b> materials in <b>{data.categoryCount}</b> categories</div>
-      </div>
-      <div className="donut">
-        <svg viewBox="0 0 120 120" width="108" height="108">
-          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--track)" strokeWidth="12" />
-          <circle className="ring" cx="60" cy="60" r="50" fill="none" stroke="url(#dg)" strokeWidth="12"
-            strokeLinecap="round" strokeDasharray={C} strokeDashoffset={dash}
-            transform="rotate(-90 60 60)" />
-          <defs>
-            <linearGradient id="dg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#3BA35A" />
-              <stop offset="1" stopColor="#2E7D32" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <div className="pct"><span className="pn">{pct}%</span><span className="pl">{topCat.category}</span></div>
-      </div>
-    </div>
-  );
-}
-
-/* ---------- live clock ---------- */
+/* ================================================================ PAGE ==== */
 function Clock() {
   const [t, setT] = useState(null);
   useEffect(() => {
@@ -193,124 +96,269 @@ function Clock() {
   return <span className="clock">{t || "--:--:--"}</span>;
 }
 
-/* ---------- page ---------- */
 export default function Page() {
-  const stats = data.categories.slice(0, 3);
-  const statMax = Math.max(...stats.map((s) => s.weight));
-  const statAccents = { Metal: "var(--g-signal)", Polymer: "var(--g-emerald)", "Metal Oxide": "var(--g-forest)" };
+  const [cfg, setCfg] = useState({ ...DEFAULTS });
+  const [drawer, setDrawer] = useState(false);
+  const [tip, setTip] = useState(null);
+  const [pick, setPick] = useState(null);
 
-  const top = data.topByWeight.slice(0, 10);
-  const matMax = top[0].weight;
-  const cats = data.categories.slice(0, 8);
+  const m = useMemo(() => buildModel(cfg), [cfg]);
+  /* The counterfactual: same unit, guard inverted. Drives the delta readout. */
+  const alt = useMemo(
+    () => (m.suspectRows.length ? buildModel({ ...cfg, excludeSuspect: !cfg.excludeSuspect }) : null),
+    [cfg, m.suspectRows.length]
+  );
 
-  const heaviest = data.topByWeight[0];
-  const goldWeight = (data.materials.find((m) => m.material === "Gold (Au)") || {}).weight || 0;
-  const share = (w) => (w / data.totalWeight) * 100;
-  const shortName = (m) => m.replace(/\s*\(.*$/, "");
+  const onHover = (data, e) =>
+    setTip(data ? { data, x: e.clientX + 16, y: e.clientY + 16 } : null);
 
-  /* every note below is derived from the data — no invented trends */
-  const KPI = [
-    {
-      icon: "materials", accent: "#34A853", name: "Total Materials", value: data.totalMaterials,
-      note: <>in <b>{data.categoryCount}</b> categories</>,
-    },
-    {
-      icon: "gold", accent: "#C6A02C", name: "Weight of Gold", value: goldWeight, unit: "mg", dec: 1,
-      note: <><b>{fmt(share(goldWeight), 1)}%</b> of total weight</>,
-    },
-    {
-      icon: "categories", accent: "#2E7D32", name: "Categories", value: data.categoryCount,
-      note: <><b>{data.categories[0].category}</b> is the largest</>,
-    },
-    {
-      icon: "datapoints", accent: "#1E7A45", name: "Material Appearances", value: data.totalOccurrences,
-      note: <>across <b>{data.totalMaterials}</b> materials</>,
-    },
-    {
-      icon: "heaviest", accent: "#7CB342", name: "Heaviest Material", value: heaviest.weight, unit: "mg", dec: 1,
-      note: <><b>{shortName(heaviest.material)}</b> · {Math.round(share(heaviest.weight))}% of weight</>,
-    },
+  const totalMass = m.materials.reduce((s, x) => s + x.weight, 0);
+
+  /* mass composition by class */
+  const massMix = Object.keys(BUCKETS).map((b) => {
+    const v = m.materials.filter((x) => x.bucket === b).reduce((s, x) => s + x.weight, 0);
+    return { key: b, label: BUCKETS[b].label, color: BUCKETS[b].color, value: v,
+      display: `${fmt(v, 1)} mg`, unit: "Mass" };
+  });
+  /* value composition */
+  const valueMix = [
+    ...m.contributors.map((c) => ({
+      key: c.material, label: c.material.replace(/\s*\(.*$/, ""), color: BUCKETS[c.bucket].color,
+      value: c.value, display: usd(c.value), unit: "Value",
+    })),
+    ...(m.otherValue > 0
+      ? [{ key: "_o", label: "Other", color: BUCKETS.common.color, value: m.otherValue, display: usd(m.otherValue), unit: "Value" }]
+      : []),
   ];
+
+  const selected = pick ? m.subassemblies.find((s) => s.id === pick) : null;
+  const tableRows = (selected ? selected.materials : m.flagged)
+    .filter((r) => r.weight > 0)
+    .slice(0, 60);
 
   return (
     <>
-      <ShaderBackground />
+      <ShaderBackground tone={m.decision.tone} />
       <div className="bg-veil" />
+      <Tooltip tip={tip} />
 
       <header className="header">
         <div className="header-inner">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-logo" src="/actia-logo.png" alt="ACTIA Group" width="156" height="34" />
-          <div className="sub">
-            Material Composition Report
-            <span className="sep">·</span><b>MCF8315C-Q1</b>
-            <span className="sep">·</span><b>MC121EVM</b>
+          <img className="brand-logo" src="/actia-logo.png" alt="ACTIA Group" width="150" height="32" />
+          <div className="idbar">
+            <b>{PRODUCT.id}</b>
+            <span>{PRODUCT.name}</span>
+            <span className="tagline">{PRODUCT.ecuType} · {PRODUCT.revision}</span>
           </div>
           <div className="spacer" />
-          <div className="live-pill"><span className="led" /> Live Data</div>
-          <div className="updated">
-            <div className="k">Last updated</div>
-            <div className="v"><Svg name="clock" size={12} /> <Clock /></div>
-          </div>
-          <button className="icon-btn" title="Export report" aria-label="Export report">
-            <Svg name="export" size={18} />
+          <div className="live-pill"><span className="led" /> Live</div>
+          <div className="updated"><Svg name="clock" size={12} /> <Clock /></div>
+          <button className="icon-btn" onClick={() => setDrawer(true)} title="Configuration">
+            <Svg name="categories" size={17} />
           </button>
         </div>
       </header>
 
-      <div className="wrap">
-        {/* KPI ROW */}
-        <div className="kpi-row">
-          {KPI.map((k) => <Kpi key={k.name} {...k} />)}
+      <main className="grid">
+        {/* ---- row 1: verdict + KPIs + gauge ---- */}
+        <Verdict m={m} cfg={cfg} setCfg={setCfg} alt={alt} />
+
+        <div className="kpi-strip">
+          <Kpi label="Recoverable" value={usd(m.value.expected)} foot={`${usd(m.value.low)} – ${usd(m.value.high)}`} />
+          <Kpi label="Processing cost" value={usd(m.cost.expected)} foot="per unit" />
+          <Kpi label="Critical materials" value={m.criticalFlags.length} foot={CRM_LIST_LABEL} tone="crm" />
+          <Kpi label="Hazardous" value={m.hazardFlags.length} foot="RoHS / IARC flagged" tone="haz" />
+          <Kpi label="Unit mass" value={fmt(totalMass, 0)} unit="mg" foot={`${m.materials.length} materials`} />
+          <Kpi label="BOM coverage" value={pct(m.coverage, 1)} foot={`${PRODUCT.extractedParts}/${PRODUCT.bomLineItems} parts`}
+            tone={m.coverage < 0.7 ? "warn" : ""} />
         </div>
 
-        {/* BODY */}
-        <div className="body-grid">
-          {/* left — category stat cards */}
-          <div className="col left">
-            {stats.map((s, i) => (
-              <StatCard
-                key={s.category}
-                icon={catIcon(s.category)}
-                accent={statAccents[s.category] || "var(--g-signal)"}
-                label={s.category}
-                value={s.weight}
-                count={s.count}
-                pct={(s.weight / statMax) * 100}
-                delay={0.1 + i * 0.08}
-              />
-            ))}
+        <Panel className="p-gauge" title="Recovery Value Score" sub="value ÷ cost · break-even 1.00">
+          <ArcGauge low={m.rvs.low} expected={m.rvs.expected} high={m.rvs.high} threshold={BREAK_EVEN} />
+          <div className={`gauge-verdict ${m.rvs.expected >= BREAK_EVEN ? "ok" : "under"}`}>
+            {m.rvs.expected >= BREAK_EVEN
+              ? `${fmt(m.rvs.expected, 1)}× return on processing`
+              : `returns ${pct(m.rvs.expected, 0)} of processing cost`}
           </div>
+        </Panel>
 
-          {/* center — top materials */}
-          <div className="col center">
-            <div className="card" style={{ animationDelay: "0.15s" }}>
-              <div className="sec-head"><span className="led" /> Top Materials by Weight</div>
-              <div className="mat-list">
-                {top.map((m) => <MatRow key={m.material} m={m} pct={(m.weight / matMax) * 100} />)}
-              </div>
-              <button className="view-all" type="button">
-                View all {data.totalMaterials} materials  &rarr;
-              </button>
+        {/* ---- row 2: the centrepiece ---- */}
+        <Panel className="p-scatter" title="Material map" sub="mass vs recoverable value — every material in the unit"
+          aside={<Legend items={Object.entries(BUCKETS).map(([k, v]) => ({ key: k, ...v }))} />}>
+          <MassValueScatter materials={m.materials} buckets={BUCKETS} onHover={onHover} />
+        </Panel>
+
+        <Panel className="p-mix" title="Composition">
+          <div className="mixblock">
+            <span className="mix-k">By mass · {fmt(totalMass, 0)} mg</span>
+            <StackBar segments={massMix} onHover={onHover} />
+          </div>
+          <div className="mixblock">
+            <span className="mix-k">By value · {usd(m.value.expected)}</span>
+            <StackBar segments={valueMix} onHover={onHover} />
+          </div>
+          <div className="meters">
+            <Meter label="Critical mass" value={m.criticalWeight} of={totalMass}
+              color={BUCKETS.crm.color} display={`${fmt(m.criticalWeight, 0)} mg · ${pct(m.criticalWeight / totalMass, 0)}`} />
+            <Meter label="Hazardous mass" value={m.hazardFlags.reduce((s, x) => s + x.weight, 0)} of={totalMass}
+              color={BUCKETS.hazard.color}
+              display={`${fmt(m.hazardFlags.reduce((s, x) => s + x.weight, 0), 0)} mg · ${pct(m.hazardFlags.reduce((s, x) => s + x.weight, 0) / totalMass, 0)}`} />
+            <Meter label="BOM characterised" value={m.coverage} of={1} color="var(--g-forest)" display={pct(m.coverage, 1)} />
+          </div>
+        </Panel>
+
+        {/* ---- row 3: decomposition ---- */}
+        <Panel className="p-tree" title="Sub-assembly value" sub="area = recoverable value · click to filter the table"
+          aside={pick ? <button className="chipbtn" onClick={() => setPick(null)}>Clear filter ✕</button> : null}>
+          <Treemap items={m.subassemblies} buckets={BUCKETS} onHover={onHover}
+            onSelect={setPick} selected={pick} />
+        </Panel>
+
+        <Panel className="p-table"
+          title={selected ? selected.name : "Flagged materials"}
+          sub={selected ? `${selected.partCount} parts · ${fmt(selected.weight, 0)} mg` : `${m.flagged.length} critical or hazardous`}>
+          <div className="tablewrap">
+            <table className="tbl">
+              <thead>
+                <tr>
+                  <th scope="col">Material</th>
+                  <th scope="col">Class</th>
+                  <th scope="col" className="num">Mass</th>
+                  <th scope="col" className="num">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableRows.map((r) => (
+                  <tr key={r.material}>
+                    <th scope="row">
+                      <span className="dot" style={{ background: BUCKETS[r.bucket].color }} />
+                      {r.material}
+                      {r.suspectWeight > 0 ? <em className="susp" title="suspect rows held out">⚑</em> : null}
+                    </th>
+                    <td>
+                      <span className="tags">
+                        {r.lists.map((l) => (
+                          <span key={l} className={`tag tag-${l.toLowerCase()}`}>{l === "PM" ? "Precious" : l}</span>
+                        ))}
+                        {r.hazard ? <span className="tag tag-haz">Hazard</span> : null}
+                        {!r.lists.length && !r.hazard ? <span className="tag tag-none">{r.category}</span> : null}
+                      </span>
+                    </td>
+                    <td className="num">{mg(r.weight)}</td>
+                    <td className="num strong">{r.value > 0 ? usd(r.value) : "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Panel>
+
+        {/* ---- data quality, compact ---- */}
+        {m.suspectRows.length > 0 && (
+          <Panel className="p-dq" title="Data-quality flags"
+            sub={`${m.suspectRows.length} rows report a precious metal above ${pct(cfg.suspectPreciousShare)} of part mass`}>
+            <div className="dqrows">
+              {m.suspectRows.map((r) => (
+                <div key={r.material + r.part} className="dqrow">
+                  <b>{r.material.replace(/\s*\(.*$/, "")}</b>
+                  <span>{r.part}</span>
+                  <span className="dqbar"><span style={{ width: `${Math.min(100, r.share * 100 * 3)}%` }} /></span>
+                  <em>{pct(r.share, 1)} of part</em>
+                </div>
+              ))}
             </div>
-          </div>
+            <p className="dqnote">
+              Signature of a composition-percentage table parsed as milligrams. Worth {usd(m.suspectValue)} if trusted.
+            </p>
+          </Panel>
+        )}
+      </main>
 
-          {/* right — total + category breakdown */}
-          <div className="col right">
-            <TotalCard />
-            <div className="card" style={{ animationDelay: "0.28s" }}>
-              <div className="sec-head"><span className="led" /> Category Breakdown</div>
-              <div className="cat-list">
-                {cats.map((c) => <CatRow key={c.category} c={c} totalWeight={data.totalWeight} />)}
-              </div>
-            </div>
-          </div>
-        </div>
+      <footer className="foot">
+        material_extractor · {PRODUCT.extractedParts}/{PRODUCT.bomLineItems} BOM items characterised ·
+        criticality per {CRM_LIST_LABEL} · prices {PRICES_AS_OF}
+      </footer>
 
-        <div className="foot-note">
-          Source: <b>materials_summary.csv</b> · ACTIA Material Extractor · {data.totalMaterials} materials · {data.categoryCount} categories
+      <ConfigDrawer cfg={cfg} setCfg={setCfg} open={drawer} setOpen={setDrawer} />
+    </>
+  );
+}
+
+/* ============================================================== DRAWER ==== */
+function Slider({ label, value, min, max, step, onChange, format }) {
+  return (
+    <label className="fld">
+      <span className="fld-k">{label}<b>{format(value)}</b></span>
+      <input type="range" min={min} max={max} step={step} value={value}
+        onChange={(e) => onChange(Number(e.target.value))} />
+    </label>
+  );
+}
+
+function ConfigDrawer({ cfg, setCfg, open, setOpen }) {
+  const set = (k) => (v) => setCfg({ ...cfg, [k]: v });
+  const priced = Object.entries(ELEMENT_ECONOMICS)
+    .filter(([, e]) => e.recovery > 0)
+    .sort((a, b) => b[1].price - a[1].price);
+  return (
+    <>
+      <div className={`scrim ${open ? "on" : ""}`} onClick={() => setOpen(false)} />
+      <aside className={`drawer ${open ? "on" : ""}`} aria-hidden={!open}>
+        <div className="drawer-h">
+          <h2>Configuration</h2>
+          <button className="icon-btn" onClick={() => setOpen(false)} aria-label="Close">✕</button>
         </div>
-      </div>
+        <div className="drawer-b">
+          <h3>Economics</h3>
+          <label className="fld">
+            <span className="fld-k">Processing cost<b>{usd(cfg.processingCost)}/unit</b></span>
+            <input type="number" step="0.05" min="0.01" value={cfg.processingCost}
+              onChange={(e) => set("processingCost")(Number(e.target.value) || 0.01)} />
+          </label>
+          <Slider label="Price spread" value={cfg.priceSpread} min={0} max={0.6} step={0.05}
+            onChange={set("priceSpread")} format={(v) => `±${pct(v)}`} />
+          <Slider label="Recovery spread" value={cfg.recoverySpread} min={0} max={0.5} step={0.05}
+            onChange={set("recoverySpread")} format={(v) => `±${pct(v)}`} />
+          <Slider label="Cost spread" value={cfg.costSpread} min={0} max={0.6} step={0.05}
+            onChange={set("costSpread")} format={(v) => `±${pct(v)}`} />
+
+          <h3>Thresholds</h3>
+          <Slider label="Min. critical materials" value={cfg.minCriticalMaterials} min={1} max={20} step={1}
+            onChange={set("minCriticalMaterials")} format={(v) => `${v}`} />
+          <Slider label="Confidence floor" value={cfg.confidenceFloor} min={0.3} max={0.99} step={0.01}
+            onChange={set("confidenceFloor")} format={(v) => pct(v)} />
+          <Slider label="Sub-component value share" value={cfg.subComponentValueShare} min={0.5} max={1} step={0.05}
+            onChange={set("subComponentValueShare")} format={(v) => pct(v)} />
+
+          <h3>Data-quality guard</h3>
+          <label className="fld fld-check">
+            <input type="checkbox" checked={cfg.excludeSuspect}
+              onChange={(e) => set("excludeSuspect")(e.target.checked)} />
+            <span>Hold suspect precious-metal rows out</span>
+          </label>
+          <Slider label="Suspect above" value={cfg.suspectPreciousShare} min={0.01} max={0.5} step={0.01}
+            onChange={set("suspectPreciousShare")} format={(v) => `${pct(v)} of part mass`} />
+
+          <h3>Prices &amp; recovery</h3>
+          <p className="drawer-note">As of {PRICES_AS_OF}. {PRICE_SOURCE}.</p>
+          <div className="tablewrap">
+            <table className="tbl compact">
+              <thead><tr><th scope="col">Element</th><th scope="col" className="num">$/kg</th><th scope="col" className="num">Rec.</th></tr></thead>
+              <tbody>
+                {priced.map(([sym, e]) => (
+                  <tr key={sym}>
+                    <th scope="row">{e.name} <em>({sym})</em></th>
+                    <td className="num">{fmt(e.price, 2)}</td>
+                    <td className="num">{pct(e.recovery)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <button className="reset" onClick={() => setCfg({ ...DEFAULTS })}>Reset to defaults</button>
+        </div>
+      </aside>
     </>
   );
 }
